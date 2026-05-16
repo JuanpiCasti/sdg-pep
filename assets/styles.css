@@ -307,7 +307,13 @@ li::marker { color: var(--azul); }
   margin-bottom: .55rem;
 }
 math { font-size: 1.2rem; }
-.formula math { display: block; margin: .2rem 0; }
+.formula math { display: block; margin: .3rem 0; }
+/* Separación entre fórmulas apiladas (sobre todo con fracciones) */
+.formula math + math {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--borde-fino);
+}
 .mvar { font-style: italic; font-family: var(--serif); }
 
 /* lista de definición de variables */
