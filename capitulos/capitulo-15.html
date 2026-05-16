@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cap. 15 · Criterios de evaluación de proyectos — Sapag Chain</title>
+<meta name="description" content="Capítulo 15: criterios de evaluación — matemáticas financieras, VAN, TIR, TIR vs VAN, VAN y TIR ajustados, payback, ROA/ROE, RBC, anualidad equivalente e inflación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="../index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#capitulos">Capítulos</a>
+      <a href="../formulario.html">Formulario</a>
+      <a href="../glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="../index.html">Inicio</a> ›
+    <a href="../index.html#capitulos">Capítulos</a> ›
+    <span>Capítulo 15</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Bloque 6 · Criterios de evaluación y decisión · Núcleo</span>
+      <div class="num">Capítulo 15</div>
+      <h1 class="cap-titulo">Criterios de evaluación de proyectos</h1>
+    </header>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Objetivo del capítulo</div>
+      <p>Analizar las principales técnicas de medición de la <strong>rentabilidad</strong> de un
+        proyecto individual. La evaluación compara los beneficios proyectados con el flujo de
+        desembolsos, considerando el <strong>valor del dinero en el tiempo</strong>.</p>
+    </div>
+
+    <nav class="cap-indice" aria-label="Contenido del capítulo">
+      <h2>Contenido del capítulo</h2>
+      <ol>
+        <li><a href="#s1"><span class="ix-num">15.1</span>Fundamentos de matemáticas financieras</a></li>
+        <li><a href="#s2"><span class="ix-num">15.2</span>El criterio del valor actual neto (VAN)</a></li>
+        <li><a href="#s3"><span class="ix-num">15.3</span>El criterio de la tasa interna de retorno (TIR)</a></li>
+        <li><a href="#s4"><span class="ix-num">15.4</span>TIR versus VAN</a></li>
+        <li><a href="#s5"><span class="ix-num">15.5</span>El VAN y la TIR ajustados</a></li>
+        <li><a href="#s6"><span class="ix-num">15.6</span>El periodo de recuperación o payback</a></li>
+        <li><a href="#s7"><span class="ix-num">15.7</span>Las tasas de retorno ROA y ROE</a></li>
+        <li><a href="#s8"><span class="ix-num">15.8-15.9</span>RBC y anualidad equivalente</a></li>
+        <li><a href="#s10"><span class="ix-num">15.10</span>Efectos de la inflación</a></li>
+        <li><a href="#resumen"><span class="ix-num">§</span>Resumen</a></li>
+        <li><a href="#preguntas"><span class="ix-num">?</span>Preguntas y problemas</a></li>
+      </ol>
+    </nav>
+
+    <!-- ================= 15.1 ================= -->
+    <h2 id="s1"><span class="h-num">15.1</span> Fundamentos de matemáticas financieras</h2>
+    <p>El <strong>valor tiempo del dinero</strong> es la rentabilidad que el inversionista
+      exige por aplazar su consumo a un futuro conocido. Un dólar hoy vale más que un dólar
+      futuro: por eso los ingresos futuros deben <strong>descontarse</strong>.</p>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmulas 15.8 y 15.9 · Valor futuro y valor actual</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>VF</mi><mo>=</mo><mi>VA</mi><mo>·</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup></mrow>
+        <mspace width="2.5em"/>
+        <mrow><mi>VA</mi><mo>=</mo><mfrac><mi>VF</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup></mfrac></mrow>
+      </math>
+      <dl class="vars">
+        <dt>VF</dt><dd>valor futuro</dd>
+        <dt>VA</dt><dd>valor actual (inversión inicial)</dd>
+        <dt>i</dt><dd>tasa de interés</dd>
+        <dt>n</dt><dd>número de periodos</dd>
+      </dl>
+    </div>
+    <p>$1 000 invertidos al 10 % anual compuesto durante 2 años se capitalizan a
+      1 000·(1,10)² = <strong>$1 210</strong>. A la inversa, el valor actual de $1 210 a recibir
+      en 2 años, al 10 %, es $1 000. Un flujo de cuotas constantes <em>C</em> (una
+      <strong>anualidad</strong>) se actualiza con:</p>
+    <div class="formula">
+      <span class="etq">Fórmula 15.13 · Valor actual de una anualidad</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>VA</mi><mo>=</mo><mi>C</mi><mo>·</mo>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><mn>1</mn><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+        </mrow>
+      </math>
+    </div>
+
+    <!-- ================= 15.2 ================= -->
+    <h2 id="s2"><span class="h-num">15.2</span> El criterio del valor actual neto (VAN)</h2>
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Concepto clave · Valor Actual Neto</div>
+      <p>El proyecto debe aceptarse si su VAN es <strong>igual o superior a cero</strong>. El
+        VAN es la diferencia entre todos los ingresos y egresos expresados en moneda actual: es
+        una <strong>medida de valor o riqueza</strong> —cuánto valor genera el proyecto por
+        sobre la rentabilidad exigida—.</p>
+    </div>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.18 · Valor Actual Neto</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>VAN</mi><mo>=</mo>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><msub><mi>BN</mi><mi>t</mi></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+          <mo>−</mo><msub><mi>I</mi><mn>0</mn></msub>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>BNₜ</dt><dd>beneficio neto del flujo en el periodo <em>t</em> (puede ser positivo o negativo)</dd>
+        <dt>I₀</dt><dd>inversión inicial en el momento cero</dd>
+        <dt>i</dt><dd>tasa de descuento (costo de capital)</dd>
+      </dl>
+    </div>
+    <div class="tabla-wrap">
+      <table>
+        <caption>Interpretación del resultado del VAN</caption>
+        <thead><tr><th>Resultado</th><th>Interpretación</th><th>Decisión</th></tr></thead>
+        <tbody>
+          <tr><td><strong>VAN &gt; 0</strong></td><td>El proyecto genera riqueza por sobre la
+            rentabilidad exigida.</td><td>Aceptar</td></tr>
+          <tr><td><strong>VAN = 0</strong></td><td>Compensación perfecta: cubre costos,
+            recupera la inversión y genera la renta exigida.</td><td>Aceptar (es indiferente)</td></tr>
+          <tr><td><strong>VAN &lt; 0</strong></td><td>Falta esa cantidad para generar la renta
+            exigida (no significa necesariamente que sea no rentable).</td><td>Rechazar</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================= 15.3 ================= -->
+    <h2 id="s3"><span class="h-num">15.3</span> El criterio de la tasa interna de retorno (TIR)</h2>
+    <p>La <strong>TIR</strong> es la tasa de rendimiento con la cual la totalidad de los
+      beneficios actualizados iguala a los desembolsos —equivale a hacer el <strong>VAN igual a
+      cero</strong>—:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.21 · Tasa Interna de Retorno</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><msub><mi>BN</mi><mi>t</mi></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>r</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+          <mo>−</mo><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>r</dt><dd>tasa interna de retorno</dd>
+      </dl>
+    </div>
+    <p>La TIR se compara con el costo de capital: si <strong>TIR ≥ tasa de descuento</strong>,
+      el proyecto se acepta; si es menor, se rechaza.</p>
+
+    <div class="caja caja--nota">
+      <div class="caja__tit">El problema de las TIR múltiples</div>
+      <p>Habrá tantas TIR como <strong>cambios de signo</strong> tenga el flujo de caja. El
+        ejemplo de Lorie y Savage —flujo (−1 600; 10 000; −10 000)— tiene <strong>dos
+        TIR: 25 % y 400 %</strong>, ambas resuelven la ecuación. Cuando esto ocurre, la TIR no
+        permite recomendar un curso de acción claro: debe usarse el <strong>VAN</strong>. (El
+        número de cambios de signo es el <em>máximo</em> de TIR posibles, no una garantía: un
+        flujo (−1 000; 1 400; −100) con dos cambios de signo tiene una sola TIR de 32,5 %.)</p>
+    </div>
+
+    <!-- ================= 15.4 ================= -->
+    <h2 id="s4"><span class="h-num">15.4</span> TIR versus VAN</h2>
+    <p>En decisiones de <strong>aceptación o rechazo</strong>, ambos criterios coinciden. Pero
+      al <strong>jerarquizar</strong> proyectos excluyentes pueden contradecirse.</p>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Flujos divergentes</div>
+      <div class="ejemplo__cuerpo">
+        <p>Dos proyectos excluyentes con igual inversión ($12 000) pero distinta distribución de
+          ingresos:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadros 15.5-15.6 · VAN según la tasa de descuento</caption>
+            <thead><tr><th>Proyecto</th><th class="num">TIR</th><th class="num">VAN al 5 %</th><th class="num">VAN al 11,72 %</th><th class="num">VAN al 15 %</th></tr></thead>
+            <tbody>
+              <tr><td>A (ingresos crecientes)</td><td class="num">16,39 %</td><td class="num">3 486</td><td class="num">1 274</td><td class="num">360</td></tr>
+              <tr><td>B (ingresos decrecientes)</td><td class="num">20,27 %</td><td class="num">2 469</td><td class="num">1 274</td><td class="num">756</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">La TIR prefiere siempre B. Pero el VAN prefiere A cuando la tasa es
+          inferior al <strong>11,72 %</strong> (la intersección de Fisher), y B cuando es
+          superior. El VAN, al medir la contribución concreta al valor de la empresa, es el
+          criterio que debe primar.</p>
+      </div>
+    </div>
+    <p>La diferencia se debe al supuesto de <strong>reinversión</strong>: la TIR supone que los
+      excedentes se reinvierten a la propia TIR; el VAN, a la tasa de descuento. Si la empresa
+      es eficiente, ya invirtió en todo proyecto de VAN positivo, por lo que reinvertirá a su
+      tasa de descuento.</p>
+
+    <!-- ================= 15.5 ================= -->
+    <h2 id="s5"><span class="h-num">15.5</span> El VAN y la TIR ajustados</h2>
+    <p>El <strong>VAN ajustado</strong> trata las decisiones de inversión y financiamiento de
+      forma independiente: VAN del proyecto puro + VAN de la deuda. La <strong>TIR
+      ajustada</strong> es la rentabilidad de los activos ajustada por el efecto de la deuda.</p>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · TIR ajustada</div>
+      <div class="ejemplo__cuerpo">
+        <p>Proyecto puro: inversión $40 000 → VAN (13 %) = 15 760, <strong>TIR de los activos
+          25,7 %</strong>. VAN de la deuda = 483 (valor presente del ahorro tributario). Al
+          restar ese ahorro de la inversión inicial (39 517), la <strong>TIR ajustada sube a
+          26,3 %</strong>.</p>
+        <p class="resultado">La TIR ajustada (26,3 %) mide la rentabilidad de los activos
+          <em>ajustada por la deuda</em>; es distinta de la TIR del inversionista (35,9 %), que
+          mide la rentabilidad de los recursos propios aportados.</p>
+      </div>
+    </div>
+
+    <!-- ================= 15.6 ================= -->
+    <h2 id="s6"><span class="h-num">15.6</span> El periodo de recuperación o payback</h2>
+    <p>Determina el número de periodos necesarios para recuperar la inversión inicial. Con
+      flujos constantes:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.24 · Periodo de recuperación</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>PR</mi><mo>=</mo><mfrac><msub><mi>I</mi><mn>0</mn></msub><mi>BN</mi></mfrac></mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.5rem">Ejemplo: inversión $2 000, beneficio neto
+        anual $400 → PR = 5 años. Con flujos desiguales se acumulan hasta cubrir la inversión.</p>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Recuerde y reflexione</div>
+      <p>El payback es simple, pero tiene dos grandes desventajas: <strong>ignora las ganancias
+        posteriores</strong> al periodo de recuperación (prioriza la liquidez sobre la
+        rentabilidad) y, en su forma simple, <strong>no considera el valor tiempo del
+        dinero</strong>. Esto último se corrige descontando los flujos (payback descontado).</p>
+    </div>
+
+    <!-- ================= 15.7 ================= -->
+    <h2 id="s7"><span class="h-num">15.7</span> Las tasas de retorno ROA y ROE</h2>
+    <p>La <strong>tasa de retorno</strong> es la razón entre la utilidad esperada de un periodo
+      y la inversión:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.25 · Tasa de retorno</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>TR</mi><mo>=</mo><mfrac><mi>BN</mi><msub><mi>I</mi><mn>0</mn></msub></mfrac></mrow>
+      </math>
+    </div>
+    <dl class="conceptos">
+      <div class="concepto"><dt>ROA · Return Over Assets</dt>
+        <dd>Tasa de retorno sobre los <strong>activos</strong>: flujos de la operación ÷ valor
+          de los activos.</dd></div>
+      <div class="concepto"><dt>ROE · Return Over Equity</dt>
+        <dd>Tasa de retorno sobre el <strong>patrimonio</strong>: flujos incluidos los gastos
+          financieros ÷ inversión propia (activos − préstamo).</dd></div>
+    </dl>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Cálculo de ROA y ROE</div>
+      <div class="ejemplo__cuerpo">
+        <p>Inversión en activos $20 000, deuda $11 000, patrimonio $9 000. Flujo neto sin deuda
+          $1 400; con deuda $916:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>ROA</mi><mo>=</mo><mfrac><mn>1 400</mn><mn>20 000</mn></mfrac><mo>=</mo><mn>7,0 %</mn></mrow>
+          <mspace width="2.5em"/>
+          <mrow><mi>ROE</mi><mo>=</mo><mfrac><mn>916</mn><mn>9 000</mn></mfrac><mo>=</mo><mn>10,2 %</mn></mrow>
+        </math>
+        <p class="resultado">La ROA y la ROE miden la rentabilidad en un <strong>momento
+          determinado</strong>; la TIR la mide en el <strong>largo plazo</strong>, considerando
+          la variabilidad de los flujos futuros.</p>
+      </div>
+    </div>
+
+    <!-- ================= 15.8-15.9 ================= -->
+    <h2 id="s8"><span class="h-num">15.8-15.9</span> RBC y anualidad equivalente</h2>
+    <h3>Razón beneficio-costo (RBC)</h3>
+    <div class="formula">
+      <span class="etq">Fórmula 15.26 · Razón beneficio-costo descontada</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>RBC</mi><mo>=</mo>
+          <mfrac>
+            <mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>Y</mi><mi>t</mi></msub><mo>/</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mrow>
+            <mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msub><mi>E</mi><mi>t</mi></msub><mo>/</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.5rem">Cuando el VAN = 0, la RBC = 1; cuando el VAN
+        &gt; 0, la RBC &gt; 1. Es inferior al VAN: entrega un índice en lugar de un valor
+        concreto y exige dos actualizaciones.</p>
+    </div>
+
+    <h3>Anualidad equivalente</h3>
+    <p>Es la expresión <strong>uniforme</strong> de un comportamiento de ingresos y gastos que
+      ocurren de manera desigual, respetando el valor del dinero en el tiempo. Existen el costo
+      anual equivalente (CAE), el beneficio anual equivalente (BAE) y la tasa anual equivalente
+      (TAE). Una aplicación: determinar el <strong>momento óptimo de reemplazo</strong> de un
+      activo —cuando el costo de operación efectivo supera al CAE, conviene reemplazar—.</p>
+    <p>Para comparar proyectos de <strong>distinta vida útil</strong> se usa el <strong>valor
+      anual equivalente (VAE)</strong>:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.28 · Valor anual equivalente</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>VAE</mi><mo>=</mo>
+          <mfrac>
+            <mi>VAN</mi>
+            <mrow><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mn>1</mn><mo>/</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · VAE de proyectos de distinta vida útil</div>
+      <div class="ejemplo__cuerpo">
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 15.12 · VAN frente a VAE (tasa 15 %)</caption>
+            <thead><tr><th>Proyecto</th><th class="num">Vida útil</th><th class="num">VAN</th><th class="num">VAE</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td class="num">9 años</td><td class="num">3 006</td><td class="num">630</td></tr>
+              <tr><td>B</td><td class="num">6 años</td><td class="num">2 975</td><td class="num">786</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">El VAN prefiere A; el VAE prefiere B. El VAE (o repetir los
+          proyectos) solo es válido cuando el supuesto de <strong>repetición</strong> en
+          idénticas condiciones puede probarse.</p>
+      </div>
+    </div>
+
+    <!-- ================= 15.10 ================= -->
+    <h2 id="s10"><span class="h-num">15.10</span> Efectos de la inflación en la evaluación</h2>
+    <p>La inflación es un alza sostenida del nivel de precios. Si <strong>todos</strong> los
+      componentes del flujo —incluida la tasa de descuento— se corrigen en igual proporción, la
+      rentabilidad no se ve afectada.</p>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Recuerde y reflexione</div>
+      <p>El problema aparece cuando <strong>no todos los factores se corrigen igual</strong>: se
+        producen cambios en los <em>precios relativos</em> que sí afectan la rentabilidad. Lo
+        relevante son los <strong>flujos reales</strong>, no los nominales —en economías con
+        inflación, los flujos deben convertirse a moneda constante del periodo cero—. Atención
+        a la inversión en <strong>activos monetarios</strong> (efectivo, cuentas por cobrar),
+        que pierden valor con la inflación.</p>
+    </div>
+    <p>Cuando se usa la TIR, la inflación obliga a distinguir la tasa nominal de la real:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 15.33 · Tasa de rentabilidad real</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mi>r</mi><mo>−</mo><mi>f</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>f</mi></mrow></mfrac></mrow>
+      </math>
+      <dl class="vars">
+        <dt>R</dt><dd>tasa de rentabilidad real</dd>
+        <dt>r</dt><dd>tasa nominal del proyecto</dd>
+        <dt>f</dt><dd>tasa de inflación</dd>
+      </dl>
+    </div>
+
+    <!-- ================= RESUMEN ================= -->
+    <section class="resumen" id="resumen">
+      <h2>Resumen</h2>
+      <p>Los criterios de evaluación son más complementarios que suplementarios. El
+        <strong>VAN</strong> es, en todos los casos, superior a los demás: mide la contribución
+        concreta del proyecto a la riqueza del inversionista. La <strong>TIR</strong> es más
+        intuitiva, pero tiene fuertes limitaciones —tasas múltiples y el supuesto de
+        reinversión a la propia TIR— que la hacen no recomendable como criterio de decisión.</p>
+      <p>El <strong>payback</strong> mide la liquidez, no la rentabilidad. La <strong>ROA y
+        ROE</strong> miden la rentabilidad en un momento determinado; la TIR, en el largo
+        plazo. La <strong>RBC</strong> entrega un índice en lugar de un valor. La
+        <strong>anualidad equivalente</strong> (CAE, BAE, VAE) sirve para el momento óptimo de
+        reemplazo y para comparar proyectos de distinta vida útil. Finalmente, la
+        <strong>inflación</strong> debe incorporarse cuando genera cambios en los precios
+        relativos: la evaluación debe trabajar con flujos reales en moneda constante.</p>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas y problemas</h2>
+      <ol>
+        <li>¿En qué circunstancias la TIR y el VAN conducen a resultados contradictorios y
+          cuándo proporcionan igual resultado? Grafíquelo.</li>
+        <li>Explique cómo la inflación puede afectar la construcción de los flujos de caja.</li>
+        <li>Explique en qué se diferencia el cálculo de la TIR de los activos del de la ROA.</li>
+        <li>Comente: «Un proyecto con VAN negativo puede tener utilidades y uno con VAN positivo
+          puede tener pérdidas.»</li>
+        <li>Comente: «La TIR mide el costo máximo del capital que puede resistir el proyecto.»</li>
+        <li>Comente: «El VAN es el método más adecuado para elegir entre proyectos de distinta
+          vida y distinta inversión.»</li>
+        <li>Comente: «Si la TIR es positiva, el VAN también lo es.»</li>
+        <li>Comente: «Un proyecto con VAN igual a cero no debe implementarse porque no genera
+          utilidades.»</li>
+        <li>Comente: «La TIR y la tasa de descuento representan el costo de oportunidad del
+          inversionista cuando el VAN es igual a cero.»</li>
+        <li>Comente: «Cuando los recursos no alcanzan para todos los proyectos rentables, la TIR
+          sigue siendo el método más razonable.»</li>
+      </ol>
+    </section>
+
+    <!-- ================= BIBLIOGRAFÍA ================= -->
+    <section class="biblio">
+      <h2>Bibliografía del capítulo</h2>
+      <ul>
+        <li>Besley, S. y Brigham, E. F. <em>Essentials of Managerial Finance</em>. Thomson/South-Western, 2007.</li>
+        <li>Elton, E. J. et al. <em>Modern Portfolio Theory and Investment Analysis</em>. John Wiley &amp; Sons, 2009.</li>
+        <li>Lorie, H. y Savage, L. «Three Problems in Rationing Capital». Irwin, 1966.</li>
+        <li>Van Horne, J. C. y Wachowicz, J. M. <em>Fundamentals of Financial Management</em>. Prentice Hall, 2005.</li>
+        <li>Vélez Pareja, Ignacio. <em>Decisiones de inversión</em>. Pontificia Universidad Javeriana, 2006.</li>
+      </ul>
+    </section>
+
+    <nav class="cap-nav" aria-label="Navegación entre capítulos">
+      <a class="prev" href="capitulo-14.html">
+        <span class="dir">◀ Capítulo anterior</span>
+        <span class="ttl">14 · Construcción de flujos de caja</span>
+      </a>
+      <a class="next" href="capitulo-16.html">
+        <span class="dir">Capítulo siguiente ▶</span>
+        <span class="ttl">16 · Costo de capital</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo.</p>
+  </div>
+</footer>
+
+</body>
+</html>

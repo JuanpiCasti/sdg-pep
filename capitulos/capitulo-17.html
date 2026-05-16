@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cap. 17 · Análisis de riesgo — Sapag Chain</title>
+<meta name="description" content="Capítulo 17: el análisis de riesgo — riesgo e incertidumbre, identificación, clasificación y medición del riesgo, ajuste de la tasa de descuento y árbol de decisión.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="../index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#capitulos">Capítulos</a>
+      <a href="../formulario.html">Formulario</a>
+      <a href="../glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="../index.html">Inicio</a> ›
+    <a href="../index.html#capitulos">Capítulos</a> ›
+    <span>Capítulo 17</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Bloque 7 · Riesgo y sensibilidad</span>
+      <div class="num">Capítulo 17</div>
+      <h1 class="cap-titulo">Análisis de riesgo</h1>
+    </header>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Objetivo del capítulo</div>
+      <p>Analizar la <strong>identificación, clasificación y medición</strong> del riesgo en los
+        proyectos, y los criterios para incorporarlo a la evaluación. La proyección de flujos
+        es, por definición, incierta: la evaluación bajo certeza es un análisis precario.</p>
+    </div>
+
+    <nav class="cap-indice" aria-label="Contenido del capítulo">
+      <h2>Contenido del capítulo</h2>
+      <ol>
+        <li><a href="#s1"><span class="ix-num">17.1</span>El riesgo en los proyectos</a></li>
+        <li><a href="#s2"><span class="ix-num">17.2</span>La identificación del riesgo</a></li>
+        <li><a href="#s3"><span class="ix-num">17.3</span>La clasificación del riesgo</a></li>
+        <li><a href="#s4"><span class="ix-num">17.4</span>La medición del riesgo</a></li>
+        <li><a href="#s5"><span class="ix-num">17.5-17.6</span>Métodos de tratamiento y ajuste de la tasa</a></li>
+        <li><a href="#s7"><span class="ix-num">17.7</span>El método del árbol de decisión</a></li>
+        <li><a href="#resumen"><span class="ix-num">§</span>Resumen</a></li>
+        <li><a href="#preguntas"><span class="ix-num">?</span>Preguntas y problemas</a></li>
+      </ol>
+    </nav>
+
+    <!-- ================= 17.1 ================= -->
+    <h2 id="s1"><span class="h-num">17.1</span> El riesgo en los proyectos</h2>
+    <div class="tabla-wrap">
+      <table class="comparativa">
+        <caption>Riesgo frente a incertidumbre</caption>
+        <thead><tr><th>Riesgo</th><th>Incertidumbre</th></tr></thead>
+        <tbody>
+          <tr><td>Una decisión tiene más de un resultado posible y la <strong>probabilidad de
+            cada uno se conoce o puede estimarse</strong>.</td>
+            <td>No se identifican los escenarios posibles, ni sus probabilidades, ni sus
+              efectos económicos.</td></tr>
+          <tr><td>Es la <strong>variabilidad</strong> de los flujos de caja efectivos respecto
+            de los estimados en el caso base.</td>
+            <td>Crece en el tiempo; puede deberse a información incompleta, excesiva, inexacta o
+              sesgada.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>La preparación y evaluación de proyectos genera información para <strong>reducir la
+      incertidumbre</strong>, no el riesgo. El proceso de tratar el riesgo tiene tres etapas:
+      <strong>identificarlo, clasificarlo y medirlo</strong>.</p>
+
+    <!-- ================= 17.2 ================= -->
+    <h2 id="s2"><span class="h-num">17.2</span> La identificación del riesgo</h2>
+    <p>Consiste en determinar los escenarios adversos a los que el proyecto podría enfrentarse,
+      en dos dimensiones:</p>
+    <div class="esquema">
+      <div class="esquema__rama">
+        <div class="esquema__cab">Fuentes de riesgo internas</div>
+        <div class="esquema__cuerpo">
+          <div class="nodo">Grupo emprendedor: perfil de los socios, falta de <em>know-how</em></div>
+          <div class="nodo">Actividades de soporte: infraestructura, tecnología, RR. HH., management</div>
+          <div class="nodo">Actividades primarias: abastecimiento, operaciones, logística, comercialización, servicio</div>
+        </div>
+      </div>
+      <div class="esquema__rama">
+        <div class="esquema__cab">Fuentes de riesgo externas (amenazas)</div>
+        <div class="esquema__cuerpo">
+          <div class="nodo">Submercados: competidor, proveedor, distribuidor, consumidores</div>
+          <div class="nodo">Stakeholders externos: comunidad, ambientalistas, autoridades</div>
+          <div class="nodo">Contexto local: social, político, regulatorio, económico, tecnológico</div>
+          <div class="nodo">Contexto internacional: crisis financiera, terrorismo, pandemias, calentamiento global</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 17.3 ================= -->
+    <h2 id="s3"><span class="h-num">17.3</span> La clasificación del riesgo</h2>
+    <p>El riesgo se clasifica bajo dos enfoques: por <strong>tipología</strong> (comercial,
+      operacional, financiero, regulatorio, ambiental, climático, tecnológico, social) y por
+      <strong>impacto</strong> (el efecto económico que generaría si ocurre).</p>
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Concepto clave · Zona de alto riesgo</div>
+      <p>La conforman los riesgos con <strong>alta probabilidad de ocurrencia</strong> y
+        <strong>alto impacto</strong> en el desempeño económico. Son los que deben
+        sensibilizarse. Los de baja probabilidad y bajo impacto pueden prescindir de un
+        análisis profundo.</p>
+    </div>
+    <p>Conviene identificar primero las <strong>variables económicas más sensibles</strong> al
+      resultado. En un proyecto de línea aérea son las tarifas, el precio del combustible y la
+      ocupación; en uno inmobiliario, el precio del cemento, la mano de obra y la velocidad de
+      venta. La <strong>simulación de Monte Carlo</strong> (software como Crystal Ball) permite
+      graficar la sensibilidad de cada variable frente al VAN.</p>
+
+    <!-- ================= 17.4 ================= -->
+    <h2 id="s4"><span class="h-num">17.4</span> La medición del riesgo</h2>
+    <p>El riesgo se mide por la <strong>variabilidad</strong> de los flujos de caja. El
+      <strong>valor esperado</strong> y la <strong>desviación estándar</strong> de la
+      distribución de probabilidades son las medidas centrales:</p>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmulas 17.2 y 17.1 · Valor esperado y desviación estándar</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mover><mi>A</mi><mo>‾</mo></mover><mo>=</mo>
+          <munderover><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <msub><mi>A</mi><mi>x</mi></msub><msub><mi>P</mi><mi>x</mi></msub>
+        </mrow>
+      </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>σ</mi><mo>=</mo>
+          <msqrt>
+            <mrow><munderover><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+              <msup><mrow><mo>(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>−</mo><mover><mi>A</mi><mo>‾</mo></mover><mo>)</mo></mrow><mn>2</mn></msup>
+              <msub><mi>P</mi><mi>x</mi></msub></mrow>
+          </msqrt>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>Ā</dt><dd>valor esperado de la distribución de probabilidades</dd>
+        <dt>Aₓ</dt><dd>flujo de caja de la posibilidad <em>x</em></dd>
+        <dt>Pₓ</dt><dd>probabilidad de ocurrencia de <em>x</em></dd>
+      </dl>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Valor esperado, varianza y desviación estándar</div>
+      <div class="ejemplo__cuerpo">
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadros 17.1-17.3 · Distribución de probabilidades de los flujos</caption>
+            <thead><tr><th class="num">Flujo Aₓ</th><th class="num">Prob. Pₓ</th><th class="num">Aₓ·Pₓ</th><th class="num">(Aₓ−Ā)²·Pₓ</th></tr></thead>
+            <tbody>
+              <tr><td class="num">2 000</td><td class="num">0,30</td><td class="num">600</td><td class="num">75 000</td></tr>
+              <tr><td class="num">2 500</td><td class="num">0,40</td><td class="num">1 000</td><td class="num">0</td></tr>
+              <tr><td class="num">3 000</td><td class="num">0,30</td><td class="num">900</td><td class="num">75 000</td></tr>
+              <tr class="total"><td class="num"></td><td class="num">1,00</td><td class="num">Ā = 2 500</td><td class="num">Var = 150 000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>σ</mi><mo>=</mo><msqrt><mn>150 000</mn></msqrt><mo>=</mo><mn>387,30</mn></mrow>
+        </math>
+        <p class="resultado">Valor esperado $2 500, desviación estándar $387,30. A mayor
+          dispersión, mayor riesgo.</p>
+      </div>
+    </div>
+
+    <p>La desviación estándar no discrimina por el valor esperado: dos alternativas con valores
+      esperados distintos pueden tener igual σ. El <strong>coeficiente de variación</strong>
+      mide la dispersión <em>relativa</em>:</p>
+    <div class="formula">
+      <span class="etq">Fórmula 17.3 · Coeficiente de variación</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>v</mi><mo>=</mo><mfrac><mi>σ</mi><mover><mi>A</mi><mo>‾</mo></mover></mfrac></mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.5rem">En el ejemplo: v = 387,3 ÷ 2 500 = 0,15. A
+        mayor coeficiente de variación, mayor riesgo relativo.</p>
+    </div>
+
+    <!-- ================= 17.5-17.6 ================= -->
+    <h2 id="s5"><span class="h-num">17.5-17.6</span> Métodos de tratamiento y ajuste de la tasa</h2>
+    <p>Existen varios métodos para incorporar el riesgo: el <strong>criterio subjetivo</strong>
+      (apreciación personal de quien decide), los <strong>métodos estadísticos</strong>
+      (distribución de probabilidades), el <strong>ajuste a la tasa de descuento</strong>, la
+      <strong>equivalencia a certidumbre</strong>, el <strong>árbol de decisión</strong> y el
+      <strong>análisis de sensibilidad</strong> (capítulo 18).</p>
+    <p>El <strong>ajuste a la tasa de descuento</strong> castiga la rentabilidad con una tasa
+      mayor: a mayor riesgo, mayor tasa.</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmulas 17.4 y 17.5 · VAN ajustado por riesgo</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>VAN</mi><mo>=</mo>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><msub><mi>BN</mi><mi>t</mi></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>f</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+          <mo>−</mo><msub><mi>I</mi><mn>0</mn></msub>
+        </mrow>
+        <mspace width="2em"/>
+        <mrow><mi>f</mi><mo>=</mo><mi>i</mi><mo>+</mo><mi>p</mi></mrow>
+      </math>
+      <dl class="vars">
+        <dt>f</dt><dd>tasa de descuento ajustada por riesgo</dd>
+        <dt>i</dt><dd>tasa libre de riesgo</dd>
+        <dt>p</dt><dd>prima por riesgo</dd>
+      </dl>
+      <p style="font-size:.92rem;margin-top:.6rem">La <strong>curva de indiferencia del
+        mercado</strong> relaciona el coeficiente de variación con la tasa requerida. Su
+        dificultad: determinar la prima por riesgo, de carácter subjetivo.</p>
+    </div>
+
+    <!-- ================= 17.7 ================= -->
+    <h2 id="s7"><span class="h-num">17.7</span> El método del árbol de decisión</h2>
+    <p>Es una técnica gráfica que representa una serie de decisiones secuenciales en el tiempo.
+      Los <strong>cuadrados</strong> son puntos de decisión; los <strong>círculos</strong>,
+      sucesos aleatorios con probabilidades asignadas. Se calcula el <strong>valor
+      esperado</strong> de cada rama y se elige la de mayor valor.</p>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Lanzamiento de un nuevo producto</div>
+      <div class="ejemplo__cuerpo">
+        <p>Se evalúa lanzar un producto regional o nacionalmente. Si se lanza regional, luego
+          puede ampliarse a nacional. Calculando el valor esperado del VAN de cada decisión:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Figura 17.7 · Valores esperados del árbol de decisión</caption>
+            <thead><tr><th>Decisión</th><th class="num">VE del VAN</th></tr></thead>
+            <tbody>
+              <tr><td>Ampliar al ámbito nacional (suceso C)</td><td class="num">1 900</td></tr>
+              <tr><td>Continuar en el ámbito regional (suceso D)</td><td class="num">1 650</td></tr>
+              <tr class="total"><td>Introducción inicial <strong>regional</strong></td><td class="num">1 730</td></tr>
+              <tr><td>Introducción inicial nacional</td><td class="num">1 620</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">La combinación óptima es <strong>introducir regionalmente y luego
+          ampliar a nacional</strong> (VE 1 730 &gt; 1 620). El método no incluye la dispersión
+          de los resultados: según su aversión al riesgo, algunos inversionistas podrían optar
+          por continuar regionalmente.</p>
+      </div>
+    </div>
+
+    <!-- ================= RESUMEN ================= -->
+    <section class="resumen" id="resumen">
+      <h2>Resumen</h2>
+      <p>El <strong>riesgo</strong> es la variabilidad de los flujos de caja reales respecto de
+        los estimados. Tratarlo exige tres etapas. La <strong>identificación</strong> analiza
+        las fuentes de riesgo internas (debilidades de la empresa y los socios) y externas
+        (submercados, stakeholders, contexto local e internacional). La
+        <strong>clasificación</strong> determina los escenarios de mayor probabilidad e impacto
+        —la zona de alto riesgo, que debe sensibilizarse—. La <strong>medición</strong> se
+        realiza con la desviación estándar de la distribución de probabilidades, complementada
+        por el coeficiente de variación.</p>
+      <p>Para incorporar el riesgo se usan diversos enfoques: el ajuste a la tasa de descuento
+        (a mayor riesgo, mayor prima), los métodos probabilísticos —conceptualmente los más
+        adecuados— y el árbol de decisión, que combina probabilidades de resultados parciales y
+        finales para calcular el valor esperado de cada alternativa.</p>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas y problemas</h2>
+      <ol>
+        <li>Explique cómo abordar la problemática del riesgo en la evaluación de proyectos.</li>
+        <li>Explique las diferencias entre fuentes de riesgo internas y externas.</li>
+        <li>¿Por qué la desviación estándar del flujo de caja podría no ser una medida adecuada
+          del riesgo del proyecto?</li>
+        <li>¿Cómo podría llegarse a igual resultado ajustando la tasa de descuento o los flujos
+          de caja por el efecto riesgo?</li>
+        <li>¿Qué validez le asigna al criterio subjetivo en el tratamiento del riesgo?</li>
+        <li>¿En qué casos se recomienda el uso del árbol de decisiones?</li>
+        <li>Con los flujos de caja anuales según la situación económica del país (recesión alta,
+          recesión moderada, crecimiento normal, sobrecrecimiento, crecimiento alto) y sus
+          probabilidades, determine el valor esperado, la desviación estándar y el coeficiente
+          de variación.</li>
+        <li>Comente: «El riesgo se refiere a una situación con más de un curso de acción y cuya
+          probabilidad de cada resultado no se conoce ni puede estimarse.»</li>
+        <li>Comente: «El análisis de riesgo en los proyectos reduce la incertidumbre de sus
+          resultados.»</li>
+        <li>Comente: «Un proyecto que requiere gran inversión en activos fijos es menos riesgoso
+          que otro de menor inversión, porque los activos dan seguridad de recuperación.»</li>
+      </ol>
+    </section>
+
+    <!-- ================= BIBLIOGRAFÍA ================= -->
+    <section class="biblio">
+      <h2>Bibliografía del capítulo</h2>
+      <ul>
+        <li>Alexander, G. J., Sharpe, W. F. y Bailey, J. V. <em>Fundamentos de inversiones</em>. Pearson Educación, 2010.</li>
+        <li>Hillier, Frederick. «The Derivation of Probabilistic Information for the Evaluation of Risky Investments», <em>Management Science</em>, 1963.</li>
+        <li>Pareja, I. V. <em>Decisiones empresariales bajo riesgo e incertidumbre</em>. Norma, 2003.</li>
+        <li>Robichek, A. A. y Myers, S. C. «Conceptual Problems in the Use of Risk-Adjusted Discount Rates», <em>Journal of Finance</em>, 1966.</li>
+        <li>Sapag, José. «Cómo abordar la problemática del riesgo en la evaluación de proyectos», edición digital, 2013.</li>
+      </ul>
+    </section>
+
+    <nav class="cap-nav" aria-label="Navegación entre capítulos">
+      <a class="prev" href="capitulo-16.html">
+        <span class="dir">◀ Capítulo anterior</span>
+        <span class="ttl">16 · Costo de capital</span>
+      </a>
+      <a class="next" href="capitulo-18.html">
+        <span class="dir">Capítulo siguiente ▶</span>
+        <span class="ttl">18 · Análisis de sensibilidad</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Libro fuente — no se publica por derechos de autor
+*.pdf
+*.PDF
+
+# Sistema operativo
+.DS_Store

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cap. 16 · Costo de capital — Sapag Chain</title>
+<meta name="description" content="Capítulo 16: el costo de capital — consideraciones, escenarios de evaluación, costo de la deuda, modelo CAPM, beta y desapalancamiento, costo patrimonial y WACC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="../index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#capitulos">Capítulos</a>
+      <a href="../formulario.html">Formulario</a>
+      <a href="../glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="../index.html">Inicio</a> ›
+    <a href="../index.html#capitulos">Capítulos</a> ›
+    <span>Capítulo 16</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Bloque 6 · Criterios de evaluación y decisión · Núcleo</span>
+      <div class="num">Capítulo 16</div>
+      <h1 class="cap-titulo">Costo de capital</h1>
+    </header>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Objetivo del capítulo</div>
+      <p>Establecer las pautas para calcular la <strong>tasa de costo de capital</strong>
+        pertinente para evaluar un proyecto. Es una de las variables que más influye en el
+        resultado: una tasa de descuento inapropiada induce a una evaluación errada aunque
+        todas las demás variables se hayan proyectado bien.</p>
+    </div>
+
+    <nav class="cap-indice" aria-label="Contenido del capítulo">
+      <h2>Contenido del capítulo</h2>
+      <ol>
+        <li><a href="#s1"><span class="ix-num">16.1</span>Consideraciones en la estimación del costo de capital</a></li>
+        <li><a href="#s2"><span class="ix-num">16.2</span>Escenarios en la evaluación de un proyecto</a></li>
+        <li><a href="#s3"><span class="ix-num">16.3</span>El costo de la deuda</a></li>
+        <li><a href="#s4"><span class="ix-num">16.4</span>El modelo CAPM</a></li>
+        <li><a href="#s5"><span class="ix-num">16.5</span>El costo de capital patrimonial</a></li>
+        <li><a href="#s6"><span class="ix-num">16.6</span>Costo de capital promedio ponderado (WACC) vs. CAPM</a></li>
+        <li><a href="#resumen"><span class="ix-num">§</span>Resumen</a></li>
+        <li><a href="#preguntas"><span class="ix-num">?</span>Preguntas y problemas</a></li>
+      </ol>
+    </nav>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Concepto clave · Costo de capital</div>
+      <p>Es la tasa que se utiliza para determinar el valor actual de los flujos futuros y
+        representa la <strong>rentabilidad que debe exigirse a la inversión</strong> por
+        renunciar a un uso alternativo de los recursos en proyectos de riesgo similar. A mayor
+        riesgo asumido, mayor retorno exigido. Los recursos provienen de dos fuentes: recursos
+        propios (costo de oportunidad) y préstamos de terceros (interés corregido por el efecto
+        tributario).</p>
+    </div>
+
+    <!-- ================= 16.1 ================= -->
+    <h2 id="s1"><span class="h-num">16.1</span> Consideraciones en la estimación del costo de capital</h2>
+    <p>La determinación de la tasa atiende <strong>cinco factores</strong>, algunos
+      cuantitativos y otros subjetivos:</p>
+    <dl class="conceptos">
+      <div class="concepto"><dt>1 · Tasa libre de riesgo</dt>
+        <dd>Las tasas fijadas por la autoridad monetaria alientan o desalientan la inversión
+          real. Es el <strong>piso</strong> de la rentabilidad exigida.</dd></div>
+      <div class="concepto"><dt>2 · CAPM</dt>
+        <dd>Modelo que estima el costo del capital propio como la tasa libre de riesgo más un
+          premio por el riesgo sistemático del proyecto.</dd></div>
+      <div class="concepto"><dt>3 · Costo de oportunidad</dt>
+        <dd>No hay oportunidades iguales para todos: la realidad y la red de contactos del
+          inversionista determinan requerimientos de rentabilidad distintos.</dd></div>
+      <div class="concepto"><dt>4 · Aversión al riesgo</dt>
+        <dd>Factores psicológicos: hay personas dispuestas a asumir más riesgo que otras.</dd></div>
+      <div class="concepto"><dt>5 · Riesgo país</dt>
+        <dd>Incertidumbre macroeconómica, riesgo político, controles de capital. Muchos de
+          estos riesgos son diversificables y pueden incluirse en el flujo, no en la tasa.</dd></div>
+    </dl>
+
+    <!-- ================= 16.2 ================= -->
+    <h2 id="s2"><span class="h-num">16.2</span> Escenarios en la evaluación de un proyecto</h2>
+    <p>La ecuación contable básica relaciona activos, deuda y patrimonio:</p>
+    <div class="formula">
+      <span class="etq">Fórmula 16.1 · Ecuación contable básica</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>A</mi><mo>=</mo><mi>D</mi><mo>+</mo><mi>P</mi></mrow>
+      </math>
+      <dl class="vars">
+        <dt>A</dt><dd>valor de los activos</dd><dt>D</dt><dd>valor de la deuda</dd><dt>P</dt><dd>valor del patrimonio</dd>
+      </dl>
+    </div>
+    <p>Existen <strong>cuatro escenarios</strong> según el origen del proyecto:</p>
+    <div class="tabla-wrap">
+      <table>
+        <caption>Escenarios en la evaluación y tasa de descuento pertinente</caption>
+        <thead><tr><th>Escenario</th><th>Situación</th><th>Tasa pertinente</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A</strong></td><td>Empresa en funcionamiento con capital propio (deuda transitoria)</td><td>Tasa de los activos (CAPM con beta sin deuda). El crédito específico se extingue: en el largo plazo el WACC tiende a la tasa de los activos.</td></tr>
+          <tr><td><strong>B</strong></td><td>Empresa en funcionamiento con estructura de endeudamiento óptima y permanente</td><td>Tasa corporativa por <strong>WACC</strong> (válida si el proyecto tiene riesgo similar al negocio base).</td></tr>
+          <tr><td><strong>C</strong></td><td>Inversionista particular con capital propio</td><td>Tasa de los activos por CAPM puro (beta desapalancado). Sin deuda, la tasa de los activos = tasa del patrimonio.</td></tr>
+          <tr><td><strong>D</strong></td><td>Inversionista particular con crédito bancario</td><td>Construir flujos separados y aplicar el <strong>VAN ajustado</strong>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 16.2 · Costo de capital promedio ponderado (WACC)</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>k</mi><mn>0</mn></msub><mo>=</mo><msub><mi>r</mi><mtext>WACC</mtext></msub><mo>=</mo>
+          <msub><mi>k</mi><mi>d</mi></msub><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mi>c</mi></msub><mo>)</mo><mo>·</mo><mfrac><mi>D</mi><mi>A</mi></mfrac>
+          <mo>+</mo>
+          <msub><mi>k</mi><mi>e</mi></msub><mo>·</mo><mfrac><mi>P</mi><mi>A</mi></mfrac>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>k₀</dt><dd>costo de capital de los activos</dd>
+        <dt>kd</dt><dd>costo de la deuda</dd>
+        <dt>ke</dt><dd>costo del capital patrimonial (rentabilidad exigida al patrimonio)</dd>
+        <dt>tc</dt><dd>tasa de impuesto corporativo</dd>
+      </dl>
+    </div>
+    <p>Cuando la deuda se extingue, D/A = 0 y P/A = 1: el WACC se iguala con la rentabilidad
+      exigida al patrimonio. Por eso, ante una deuda específica transitoria, muchos analistas
+      prefieren el <strong>VAN ajustado</strong>: descuentan el flujo del proyecto puro a la
+      tasa de los activos y el flujo de la deuda a la tasa de la deuda, y suman ambos VAN.</p>
+
+    <!-- ================= 16.3 ================= -->
+    <h2 id="s3"><span class="h-num">16.3</span> El costo de la deuda</h2>
+    <p>El costo de la deuda (<em>kd</em>) es el costo <em>antes</em> de impuesto. Como los
+      intereses se deducen de las utilidades, el <strong>costo efectivo de la deuda</strong>
+      incorpora el ahorro tributario:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 16.3 · Costo efectivo de la deuda</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>CED</mi><mo>=</mo><msub><mi>k</mi><mi>d</mi></msub><mo>·</mo><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mi>c</mi></msub><mo>)</mo></mrow>
+      </math>
+    </div>
+    <p>El beneficio tributario solo se logra si el proyecto tiene utilidades contables. El
+      efecto tributario de la deuda puede incorporarse <strong>en la tasa o en los flujos, pero
+      no en ambos</strong> (se contabilizaría dos veces).</p>
+
+    <!-- ================= 16.4 ================= -->
+    <h2 id="s4"><span class="h-num">16.4</span> El modelo CAPM</h2>
+    <p>El <strong>CAPM</strong> (<em>Capital Asset Pricing Model</em>) nace de la teoría de
+      portfolio: el costo del capital propio es la tasa libre de riesgo más el riesgo
+      sistemático del proyecto (su <strong>beta</strong>) multiplicado por la prima de riesgo
+      del mercado.</p>
+    <div class="caja caja--nota">
+      <div class="caja__tit">Riesgo sistemático y no sistemático</div>
+      <p>El <strong>riesgo sistemático</strong> (o no diversificable) son las fluctuaciones que
+        afectan a toda la economía y el mercado. El <strong>riesgo no sistemático</strong> (o
+        diversificable) es el riesgo específico de la empresa (huelgas, nuevos competidores) y
+        puede reducirse diversificando. El CAPM solo remunera el riesgo sistemático.</p>
+    </div>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 16.4 · CAPM · Costo del capital propio</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo>
+          <msub><mi>R</mi><mi>f</mi></msub><mo>+</mo>
+          <mrow><mo>[</mo><mi>E</mi><mo>(</mo><msub><mi>R</mi><mi>m</mi></msub><mo>)</mo><mo>−</mo><msub><mi>R</mi><mi>f</mi></msub><mo>]</mo></mrow>
+          <mo>·</mo><msub><mi>β</mi><mi>i</mi></msub>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>Rf</dt><dd>tasa libre de riesgo</dd>
+        <dt>E(Rm)</dt><dd>retorno esperado del mercado</dd>
+        <dt>E(Rm) − Rf</dt><dd>prima o premio de riesgo del mercado</dd>
+        <dt>βᵢ</dt><dd>riesgo sistemático de la industria</dd>
+      </dl>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Estimación de los componentes del CAPM (Chile)</div>
+      <div class="ejemplo__cuerpo">
+        <div class="tabla-wrap">
+          <table>
+            <caption>Componentes del CAPM</caption>
+            <thead><tr><th>Componente</th><th class="num">Valor</th><th>Cálculo</th></tr></thead>
+            <tbody>
+              <tr><td>Retorno de mercado nominal (IGPA, 10 años)</td><td class="num">14,23 %</td><td>1,19 % mensual anualizado</td></tr>
+              <tr><td>Inflación promedio (IPC)</td><td class="num">3,20 %</td><td>0,27 % mensual anualizado</td></tr>
+              <tr><td>E(Rm) real</td><td class="num">11,03 %</td><td>14,23 % − 3,20 %</td></tr>
+              <tr><td>Tasa libre de riesgo Rf</td><td class="num">2,95 %</td><td>bonos del Banco Central a 10 años</td></tr>
+              <tr class="total"><td>Premio por riesgo de mercado</td><td class="num">8,08 %</td><td>11,03 % − 2,95 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">La rentabilidad de mercado y la tasa libre de riesgo deben
+          estimarse con un horizonte de largo plazo (al menos 60 meses, idealmente 120) y en
+          términos reales.</p>
+      </div>
+    </div>
+
+    <h3>El cálculo del beta</h3>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 16.5 · Beta de una inversión</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>β</mi><mi>i</mi></msub><mo>=</mo>
+          <mfrac>
+            <mrow><mi>Cov</mi><mo>(</mo><msub><mi>R</mi><mi>i</mi></msub><mo>,</mo><msub><mi>R</mi><mi>m</mi></msub><mo>)</mo></mrow>
+            <mrow><mi>Var</mi><mo>(</mo><msub><mi>R</mi><mi>m</mi></msub><mo>)</mo></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.5rem">El beta mide la sensibilidad de la
+        rentabilidad de la inversión frente a la del mercado. El mercado tiene <strong>β =
+        1</strong>; β &gt; 1 es más riesgoso que el mercado (líneas aéreas); β &lt; 1, menos
+        riesgoso (distribuidoras de energía); β = 0, libre de riesgo.</p>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Beta del sector pesquero</div>
+      <div class="ejemplo__cuerpo">
+        <p>Con los retornos del sector y del mercado de los últimos 5 años, se obtiene una
+          covarianza Cov(Ri, Rm) = 0,001276 y una varianza del mercado Var(Rm) = 0,00177:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>β</mi><mo>=</mo><mfrac><mn>0,001276</mn><mn>0,00177</mn></mfrac><mo>=</mo><mn>0,7209</mn></mrow>
+        </math>
+        <p class="resultado">El sector pesquero del ejemplo es menos riesgoso que el mercado
+          (β &lt; 1).</p>
+      </div>
+    </div>
+
+    <h3>Desapalancamiento del beta</h3>
+    <p>Los betas de las empresas que cotizan en bolsa incluyen riesgo operacional
+      <em>y</em> financiero. Hay que <strong>desapalancarlos</strong> para obtener el riesgo
+      propio del negocio:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmulas 16.6 y 16.7 · Beta apalancado y desapalancado</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>β</mi><mrow><mi>c/d</mi></mrow></msub><mo>=</mo>
+          <msub><mi>β</mi><mrow><mi>s/d</mi></mrow></msub><mo>+</mo>
+          <mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mi>c</mi></msub><mo>)</mo><mo>·</mo>
+          <mfrac><mi>D</mi><mi>P</mi></mfrac><mo>·</mo>
+          <msub><mi>β</mi><mrow><mi>s/d</mi></mrow></msub>
+        </mrow>
+      </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>β</mi><mrow><mi>s/d</mi></mrow></msub><mo>=</mo>
+          <mfrac>
+            <msub><mi>β</mi><mrow><mi>c/d</mi></mrow></msub>
+            <mrow><mn>1</mn><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><msub><mi>t</mi><mi>c</mi></msub><mo>)</mo><mo>·</mo><mi>D</mi><mo>/</mo><mi>P</mi></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>βc/d</dt><dd>beta apalancado o con deuda (riesgo operacional + financiero)</dd>
+        <dt>βs/d</dt><dd>beta desapalancado o sin deuda (solo riesgo operacional)</dd>
+      </dl>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Desapalancamiento del beta del sector retail</div>
+      <div class="ejemplo__cuerpo">
+        <p>Una empresa de retail tiene β c/d = 1,48; activos $1 096 B, patrimonio $630 B (deuda
+          $466 B); tc = 20 %:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><msub><mi>β</mi><mrow><mi>s/d</mi></mrow></msub><mo>=</mo>
+            <mfrac><mn>1,48</mn><mrow><mn>1</mn><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><mn>0,20</mn><mo>)</mo><mo>·</mo><mo>(</mo><mn>466</mn><mo>/</mo><mn>630</mn><mo>)</mo></mrow></mfrac>
+            <mo>=</mo><mn>0,93</mn>
+          </mrow>
+        </math>
+        <p>Con β s/d = 0,93, la tasa de descuento del sector retail es:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>E</mi><mo>(</mo><msub><mi>R</mi><mi>i</mi></msub><mo>)</mo><mo>=</mo><mn>2,95 %</mn><mo>+</mo><mo>(</mo><mn>11,03 %</mn><mo>−</mo><mn>2,95 %</mn><mo>)</mo><mo>·</mo><mn>0,93</mn><mo>=</mo><mn>10,46 %</mn></mrow>
+        </math>
+        <p class="resultado">El beta sin deuda (0,93) es menor que el beta con deuda (1,48):
+          se ha eliminado el riesgo financiero.</p>
+      </div>
+    </div>
+    <p>Cuando no hay empresas del rubro en la bolsa local, se usa una empresa estadounidense del
+      sector y se aplica un ajuste por <strong>riesgo país</strong>: la sobretasa que paga el
+      país sobre los bonos del Tesoro de EE. UU. (según JP Morgan en 2012: Chile 72,5 pb; Perú
+      98 pb; Brasil 114 pb; Argentina 1 954 pb). Puede añadirse además un premio por liquidez.</p>
+
+    <!-- ================= 16.5 ================= -->
+    <h2 id="s5"><span class="h-num">16.5</span> El costo de capital patrimonial</h2>
+    <p>El <strong>capital patrimonial</strong> es la parte de la inversión financiada con
+      recursos propios. Cuando se toman posiciones de deuda, el beta del patrimonio se
+      <strong>apalanca</strong>: el patrimonio queda en última preferencia de pago y, ante
+      escenarios adversos, más expuesto a desaparecer —de ahí que su retorno exigido sea
+      mayor—.</p>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Beta apalancado</div>
+      <div class="ejemplo__cuerpo">
+        <p>Un proyecto con β de la industria 1,2 sin deuda: E(Ri) = 2,95 % + 8,08 %·1,2 =
+          <strong>12,65 %</strong>. Si se financia el 40 % con deuda (D = 4 000, P = 6 000,
+          tc = 20 %):</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><msub><mi>β</mi><mrow><mi>c/d</mi></mrow></msub><mo>=</mo><mn>1,2</mn><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><mn>0,20</mn><mo>)</mo><mo>·</mo><mo>(</mo><mn>4 000</mn><mo>/</mo><mn>6 000</mn><mo>)</mo><mo>·</mo><mn>1,2</mn><mo>=</mo><mn>1,84</mn></mrow>
+        </math>
+        <p class="resultado">El beta apalancado (1,84) supera al sin deuda (1,2): el retorno
+          exigido al patrimonio es mayor, y crece de forma <strong>exponencial</strong> con la
+          exposición a deuda.</p>
+      </div>
+    </div>
+    <p>Métodos alternativos para el costo del capital propio: tasa libre de riesgo más un premio
+      por riesgo (<em>ke = Rf + Rp</em>), o el modelo de valoración de dividendos:</p>
+    <div class="formula">
+      <span class="etq">Fórmula 16.11 · Costo del capital propio por dividendos</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>k</mi><mi>e</mi></msub><mo>=</mo><mfrac><mi>D</mi><mi>P</mi></mfrac><mo>+</mo><mi>g</mi></mrow>
+      </math>
+      <dl class="vars">
+        <dt>D</dt><dd>dividendo por acción</dd><dt>P</dt><dd>precio de la acción</dd><dt>g</dt><dd>tasa esperada de crecimiento</dd>
+      </dl>
+      <p style="font-size:.92rem;margin-top:.5rem">Ejemplo: precio $2 160, dividendo $184,
+        crecimiento 4 % → ke = 184/2 160 + 4 % = <strong>12,5 %</strong>.</p>
+    </div>
+
+    <!-- ================= 16.6 ================= -->
+    <h2 id="s6"><span class="h-num">16.6</span> Costo de capital promedio ponderado (WACC) vs. CAPM</h2>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Recuerde y reflexione</div>
+      <p>Usar una <strong>tasa corporativa única</strong> para todos los proyectos es un error
+        si estos no tienen el mismo riesgo de la empresa. Un proyecto con riesgo superior al
+        promedio (β &gt; 1) exige una tasa mayor; uno con riesgo menor (β &lt; 1), una tasa
+        menor. La tasa correcta depende del <strong>riesgo del proyecto, no del riesgo de la
+        empresa</strong>.</p>
+    </div>
+    <p>La aplicación de tasas corporativas por WACC es correcta solo si se cumplen
+      <strong>tres condiciones</strong>:</p>
+    <ol>
+      <li>La estructura de endeudamiento es <strong>óptima</strong> (la deuda aporta valor, no
+        lo destruye).</li>
+      <li>La estructura es <strong>permanente</strong> de largo plazo (no una deuda transitoria).</li>
+      <li>El proyecto evaluado tiene un <strong>riesgo similar</strong> al del negocio base.</li>
+    </ol>
+
+    <!-- ================= RESUMEN ================= -->
+    <section class="resumen" id="resumen">
+      <h2>Resumen</h2>
+      <p>La tasa de descuento es el precio que debe pagarse por los fondos requeridos y la
+        rentabilidad mínima que se exige al proyecto según su riesgo. El <strong>costo de la
+        deuda</strong> se basa en la tasa de interés del préstamo: su costo efectivo es
+        kd·(1−t) si la empresa tiene utilidades. El <strong>costo patrimonial</strong> es un
+        costo de oportunidad que incluye un premio por el riesgo asumido; el modelo más usado
+        para estimarlo es el <strong>CAPM</strong>, que requiere la tasa libre de riesgo, la
+        prima de riesgo del mercado y el beta del sector.</p>
+      <p>Para proyectos con financiamiento múltiple se usa el <strong>costo de capital promedio
+        ponderado (WACC)</strong>, válido solo si la estructura de endeudamiento es óptima y
+        permanente y si el proyecto tiene un riesgo similar al del negocio base; de lo
+        contrario se cometen distorsiones —rechazar proyectos eficientes y aprobar
+        ineficientes—. Ante deuda transitoria, conviene el VAN ajustado.</p>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas y problemas</h2>
+      <ol>
+        <li>Explique el concepto de costo de capital y por qué se usa como tasa de descuento.</li>
+        <li>Explique el concepto del beta en el cálculo del costo de capital.</li>
+        <li>¿Qué explica que el beta con deuda sea mayor que el beta sin deuda?</li>
+        <li>¿En qué casos es recomendable el uso de tasas estimadas por WACC? ¿Cuándo induce a
+          recomendaciones erradas?</li>
+        <li>Explique por qué, al tomar posiciones de deuda, el retorno exigido al patrimonio es
+          mayor que el exigido a los activos.</li>
+        <li>¿Por qué, ante una deuda específica corta y conocida, la tasa relevante es el retorno
+          de los activos y no el WACC?</li>
+        <li>¿Qué significa que la deuda sea libre de riesgo?</li>
+        <li>Explique el concepto de <em>financial distress</em> y por qué disminuye el valor de
+          la empresa.</li>
+        <li>¿En qué caso es indiferente utilizar las tasas kd y kd·(1−t)?</li>
+        <li>Comente: «Si el interés de un préstamo es 10 % anual y el impuesto a las utilidades
+          15 %, el costo efectivo de endeudarse es 8,5 %.»</li>
+        <li>Comente: «El costo de la deuda generalmente es menor que el costo de capital propio.»</li>
+        <li>Comente: «Siempre que se introduce más deuda, el k₀ baja y el valor de la empresa
+          aumenta.»</li>
+      </ol>
+    </section>
+
+    <!-- ================= BIBLIOGRAFÍA ================= -->
+    <section class="biblio">
+      <h2>Bibliografía del capítulo</h2>
+      <ul>
+        <li>Brealey, R. y Myers, S. <em>Fundamentos de financiación empresarial</em>. Madrid: McGraw-Hill, 1998.</li>
+        <li>Damodaran, Aswath. <em>Security Analysis for Investment and Corporate Finance</em>. 2.ª ed. Wiley, 2006.</li>
+        <li>Levy, H. y Sarnat, M. <em>Capital Investment and Financial Decisions</em>. Prentice Hall, 1994.</li>
+        <li>Modigliani, F. y Miller, M. <em>The American Economic Review</em>, junio 1958.</li>
+        <li>Maquieira, Preve y Sarria-Allende. «Theory and Practice of Corporate Finance in Latin America», 2012.</li>
+      </ul>
+    </section>
+
+    <nav class="cap-nav" aria-label="Navegación entre capítulos">
+      <a class="prev" href="capitulo-15.html">
+        <span class="dir">◀ Capítulo anterior</span>
+        <span class="ttl">15 · Criterios de evaluación de proyectos</span>
+      </a>
+      <a class="next" href="capitulo-17.html">
+        <span class="dir">Capítulo siguiente ▶</span>
+        <span class="ttl">17 · Análisis de riesgo</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cap. 18 · Análisis de sensibilidad — Sapag Chain</title>
+<meta name="description" content="Capítulo 18: el análisis de sensibilidad — modelos unidimensional, bidimensional y multidimensional de sensibilización del VAN, y la simulación de Monte Carlo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="../index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#capitulos">Capítulos</a>
+      <a href="../formulario.html">Formulario</a>
+      <a href="../glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="../index.html">Inicio</a> ›
+    <a href="../index.html#capitulos">Capítulos</a> ›
+    <span>Capítulo 18</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Bloque 7 · Riesgo y sensibilidad</span>
+      <div class="num">Capítulo 18</div>
+      <h1 class="cap-titulo">Análisis de sensibilidad</h1>
+    </header>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Objetivo del capítulo</div>
+      <p>Presentar los modelos de <strong>sensibilización</strong> que permiten medir cuán
+        sensible es la evaluación a variaciones en uno o más parámetros decisorios. Se aplican
+        al VAN, la TIR, el payback o cualquier otra variable del proyecto.</p>
+    </div>
+
+    <nav class="cap-indice" aria-label="Contenido del capítulo">
+      <h2>Contenido del capítulo</h2>
+      <ol>
+        <li><a href="#s1"><span class="ix-num">18.1</span>Consideraciones preliminares</a></li>
+        <li><a href="#s2"><span class="ix-num">18.2</span>Modelo unidimensional de la sensibilización del VAN</a></li>
+        <li><a href="#s3"><span class="ix-num">18.3</span>Modelo bidimensional de la sensibilización del VAN</a></li>
+        <li><a href="#s4"><span class="ix-num">18.4</span>Modelo multidimensional y simulación de Monte Carlo</a></li>
+        <li><a href="#s5"><span class="ix-num">18.5</span>Usos y abusos del análisis de sensibilidad</a></li>
+        <li><a href="#resumen"><span class="ix-num">§</span>Resumen</a></li>
+        <li><a href="#preguntas"><span class="ix-num">?</span>Preguntas y problemas</a></li>
+      </ol>
+    </nav>
+
+    <!-- ================= 18.1 ================= -->
+    <h2 id="s1"><span class="h-num">18.1</span> Consideraciones preliminares</h2>
+    <p>Los valores de las variables usadas en la evaluación pueden desviarse con efectos
+      importantes en el resultado. El análisis de sensibilidad revela el efecto de esas
+      variaciones sobre la rentabilidad, y ayuda a decidir qué variables conviene estudiar con
+      más profundidad.</p>
+    <div class="tabla-wrap">
+      <table class="comparativa">
+        <caption>Clasificación del análisis según el número de variables</caption>
+        <thead><tr><th>Análisis unidimensional</th><th>Análisis multidimensional</th></tr></thead>
+        <tbody>
+          <tr><td>La sensibilización se aplica a <strong>una sola variable</strong>.</td>
+            <td>Examina los resultados de la incorporación <strong>simultánea de dos o más
+              variables</strong> relevantes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================= 18.2 ================= -->
+    <h2 id="s2"><span class="h-num">18.2</span> Modelo unidimensional de la sensibilización del VAN</h2>
+    <p>Determina <strong>hasta dónde puede modificarse una variable</strong> para que el
+      proyecto siga siendo rentable. Se define el <strong>VAN de equilibrio igual a cero</strong>
+      —el nivel mínimo de aprobación— y se busca el punto de quiebre de la variable:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 18.1 · Condición de VAN igual a cero</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mn>0</mn><mo>=</mo>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><msub><mi>Y</mi><mi>t</mi></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+          <mo>−</mo>
+          <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+          <mfrac><msub><mi>E</mi><mi>t</mi></msub><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>t</mi></msup></mfrac>
+          <mo>−</mo><msub><mi>I</mi><mn>0</mn></msub>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>Yₜ</dt><dd>ingresos del periodo <em>t</em></dd>
+        <dt>Eₜ</dt><dd>egresos del periodo <em>t</em></dd>
+        <dt>I₀</dt><dd>inversión inicial</dd>
+      </dl>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Recuerde y reflexione</div>
+      <p>El análisis de sensibilidad unidimensional difiere del <strong>punto de
+        equilibrio</strong>: el punto de equilibrio es una herramienta de <em>corto plazo</em>
+        (solo costos directos y de administración); la sensibilización es de <em>largo
+        plazo</em>, pues incorpora además los <strong>costos de inversión y el costo de
+        capital</strong>.</p>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Precio de quiebre del proyecto</div>
+      <div class="ejemplo__cuerpo">
+        <p>Caso base: precio $100/unidad, ventas 10 000 unidades/año, costo variable $30/u,
+          costo fijo $150 000/año, inversión $1 200 000 + $300 000 de capital de trabajo,
+          impuesto 10 %, tasa 20 %. El flujo de caja arroja un VAN positivo de $657 690.
+          Sensibilizando el <strong>precio</strong>:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>p</mi><mo>=</mo><mn>82,57</mn><mtext> ⟹ </mtext><mi>VAN</mi><mo>=</mo><mn>0</mn></mrow>
+        </math>
+        <p class="resultado">El precio puede caer hasta <strong>$82,57</strong> —una variación
+          máxima del 17,43 %— para que, vendiendo 10 000 unidades, el VAN se haga cero. En Excel
+          esto se obtiene con la función <em>Buscar objetivo</em>.</p>
+      </div>
+    </div>
+    <p>La principal <strong>limitación</strong>: solo puede sensibilizarse una variable por vez,
+      y el índice <em>t</em> deja de ser relevante (la variable adopta un valor constante).
+      Aplicar el modelo unidimensional sobre la TIR es innecesario: por definición, el VAN es
+      cero cuando la TIR iguala a la tasa de descuento.</p>
+
+    <!-- ================= 18.3 ================= -->
+    <h2 id="s3"><span class="h-num">18.3</span> Modelo bidimensional de la sensibilización del VAN</h2>
+    <p>Establece los resultados posibles considerando cambios en las <strong>dos variables de
+      mayor incidencia</strong>. Requiere: identificar las dos variables clave (la matriz de
+      riesgo es un buen punto de partida), establecer su rango de comportamiento (mejor y peor
+      escenario) y definir los <strong>saltos discretos</strong> (intervalos). En Excel se
+      construye con el comando <em>Datos → Tabla</em>.</p>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Matriz VAN: precio de venta × costo de producción</div>
+      <div class="ejemplo__cuerpo">
+        <p>Extracto del cuadro 18.2: cada celda es el VAN para una combinación de precio por
+          tonelada (columnas) y costo de producción por tonelada (filas):</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 18.2 (extracto) · VAN según precio y costo por tonelada</caption>
+            <thead><tr><th>Costo \ Precio</th><th class="num">130</th><th class="num">140</th><th class="num">150</th><th class="num">160</th></tr></thead>
+            <tbody>
+              <tr><td class="num">(90)</td><td class="num">(42 263)</td><td class="num">(5 294)</td><td class="num">31 675</td><td class="num">68 644</td></tr>
+              <tr><td class="num">(80)</td><td class="num">(5 294)</td><td class="num">31 675</td><td class="num">68 644</td><td class="num">105 613</td></tr>
+              <tr class="total"><td class="num">(70) · caso base</td><td class="num">31 675</td><td class="num">68 644</td><td class="num">105 613</td><td class="num">142 582</td></tr>
+              <tr><td class="num">(60)</td><td class="num">68 644</td><td class="num">105 613</td><td class="num">142 582</td><td class="num">179 551</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">El caso base (precio $150, costo $70) da un VAN de
+          <strong>$105 613</strong>. La matriz muestra cómo cambia el VAN —y en qué
+          combinaciones se vuelve negativo— ante variaciones simultáneas de ambas variables.</p>
+      </div>
+    </div>
+
+    <!-- ================= 18.4 ================= -->
+    <h2 id="s4"><span class="h-num">18.4</span> Modelo multidimensional y simulación de Monte Carlo</h2>
+    <p>El análisis multidimensional incorpora el efecto combinado de <strong>dos o más
+      variables</strong> y determina cómo varía el VAN ante cambios en sus valores. La
+      <strong>simulación de Monte Carlo</strong> considera una gran cantidad de combinaciones,
+      estimando los valores esperados mediante una selección aleatoria acorde con las
+      distribuciones de probabilidad de cada variable.</p>
+    <div class="flujo-pasos" style="counter-reset:none">
+      <div class="paso"><b>Identificar</b><span>las variables críticas a sensibilizar.</span></div>
+      <div class="paso"><b>Asignar</b><span>una distribución de probabilidad, un promedio y una
+        desviación estándar a cada variable.</span></div>
+      <div class="paso"><b>Definir</b><span>la variable de resultado (el VAN, el valor de la
+        empresa).</span></div>
+      <div class="paso"><b>Iterar</b><span>el número de escenarios según el nivel de confianza y
+        error permitidos.</span></div>
+    </div>
+    <p>El resultado clave: la <strong>probabilidad de que el VAN sea mayor que cero</strong> —en
+      el ejemplo del libro, el 80 %—. El gráfico de sensibilidad (<em>Sensitivity Charts</em> de
+      Crystal Ball) muestra la correlación de cada variable con el resultado: en el caso del
+      libro, el precio por tonelada explica el 64,7 %, el costo por tonelada el 15,2 %, y el
+      crecimiento y la demanda el resto. Con ello puede construirse la matriz de riesgo.</p>
+
+    <!-- ================= 18.5 ================= -->
+    <h2 id="s5"><span class="h-num">18.5</span> Usos y abusos del análisis de sensibilidad</h2>
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Para qué sirve</div>
+      <ul>
+        <li>Conocer el desempeño del proyecto frente a distintos escenarios; reduce los niveles
+          de <strong>incertidumbre</strong>, no los de riesgo.</li>
+        <li>Determinar la <strong>marginalidad</strong> del proyecto: si un cambio porcentual
+          pequeño hace negativo el VAN, el proyecto es marginal —y riesgoso—.</li>
+        <li>Decidir si profundizar el estudio de una variable o, a la inversa, no perfeccionar
+          el cálculo de una variable irrelevante.</li>
+      </ul>
+    </div>
+    <div class="caja caja--nota">
+      <div class="caja__tit">El abuso del análisis de sensibilidad</div>
+      <p>Hay abuso cuando el evaluador lo usa como <strong>excusa para no cuantificar</strong>
+        cosas que podrían calcularse, o cuando presenta solo un conjunto complicado de
+        interrelaciones sin orientar la decisión. La herramienta genera información
+        prácticamente infinita: debe aplicarse únicamente sobre las variables que afectan de
+        manera relevante el resultado. El evaluador debe asumir un papel de
+        <strong>consejero</strong> que recomienda la aceptación o el rechazo.</p>
+    </div>
+
+    <!-- ================= RESUMEN ================= -->
+    <section class="resumen" id="resumen">
+      <h2>Resumen</h2>
+      <p>El análisis de sensibilidad mide el efecto de las variaciones de las variables sobre el
+        resultado de la evaluación. Según el número de variables sensibilizadas
+        simultáneamente, es <strong>unidimensional, bidimensional o multidimensional</strong>;
+        los tres son complementarios.</p>
+      <p>El <strong>unidimensional</strong> determina hasta qué punto puede modificarse una
+        variable para que el VAN siga siendo cero —se distingue del punto de equilibrio porque
+        incorpora la inversión y el costo de capital—. El <strong>bidimensional</strong>
+        construye una matriz de VAN con las dos variables clave. El
+        <strong>multidimensional</strong>, mediante la <strong>simulación de Monte Carlo</strong>,
+        estima la probabilidad de que el VAN sea positivo. La sensibilización reduce la
+        incertidumbre, pero no debe usarse como sustituto de una correcta cuantificación.</p>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas y problemas</h2>
+      <ol>
+        <li>Explique el concepto de sensibilidad y por qué debe incluirse después de la
+          evaluación del proyecto.</li>
+        <li>¿El análisis de sensibilidad puede cambiar la decisión recomendada por la
+          evaluación?</li>
+        <li>¿Qué variables pueden aplicarse al análisis de sensibilidad y cómo deberían
+          priorizarse?</li>
+        <li>¿Cómo se aplica el análisis de sensibilidad a la comparación de opciones de
+          inversión?</li>
+        <li>Explique en qué consiste el modelo unidimensional de la sensibilización del VAN.</li>
+        <li>¿Cuáles son las limitaciones de un análisis unidimensional?</li>
+        <li>¿Por qué la sensibilización unidimensional no se aplica a la TIR?</li>
+        <li>¿Cuál es la diferencia entre la herramienta de punto de equilibrio y la
+          sensibilización unidimensional?</li>
+        <li>Describa la metodología para aplicar un método de sensibilización bidimensional.</li>
+        <li>¿En qué consiste el análisis multidimensional de la sensibilización del VAN?</li>
+        <li>¿En qué medida el análisis de sensibilidad puede ser contraproducente?</li>
+        <li>Comente: «Al aplicar el análisis de sensibilidad unidimensional sobre el VAN o la
+          TIR, se llega necesariamente a idénticos resultados.»</li>
+        <li>Comente: «Si al sensibilizar el VAN se obtiene un porcentaje de variación del 99 %,
+          el proyecto sigue siendo rentable.»</li>
+      </ol>
+    </section>
+
+    <!-- ================= BIBLIOGRAFÍA ================= -->
+    <section class="biblio">
+      <h2>Bibliografía del capítulo</h2>
+      <ul>
+        <li>Albright, S. C. et al. <em>Data Analysis and Decision Making</em>. Cengage Learning, 2010.</li>
+        <li>Brealey, R. y Myers, S. <em>Fundamentos de financiación empresarial</em>. Madrid: McGraw-Hill, 1998.</li>
+        <li>Cafferky, M. y Wentworth, J. <em>Break Even Analysis</em>. Business Expert Press, 2010.</li>
+        <li>House, W. C. «The Usefulness of Sensitivity Analysis in Capital Investment Decisions», <em>Management Accounting</em>, 1966.</li>
+        <li>Sapag, Nassir. <em>Criterios de evaluación de proyectos</em>. Madrid: McGraw-Hill, 1993.</li>
+      </ul>
+    </section>
+
+    <nav class="cap-nav" aria-label="Navegación entre capítulos">
+      <a class="prev" href="capitulo-17.html">
+        <span class="dir">◀ Capítulo anterior</span>
+        <span class="ttl">17 · Análisis de riesgo</span>
+      </a>
+      <a class="next" href="capitulo-19.html">
+        <span class="dir">Capítulo siguiente ▶</span>
+        <span class="ttl">19 · Preparación y evaluación social de proyectos</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cap. 5 · Técnicas de proyección del mercado — Sapag Chain</title>
+<meta name="description" content="Capítulo 5: técnicas de pronóstico — métodos cualitativos, modelos causales (regresión) y modelos de series de tiempo, con fórmulas y ejemplos resueltos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="../index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#capitulos">Capítulos</a>
+      <a href="../formulario.html">Formulario</a>
+      <a href="../glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="../index.html">Inicio</a> ›
+    <a href="../index.html#capitulos">Capítulos</a> ›
+    <span>Capítulo 5</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Bloque 2 · El estudio de mercado</span>
+      <div class="num">Capítulo 5</div>
+      <h1 class="cap-titulo">Técnicas de proyección del mercado</h1>
+    </header>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Objetivo del capítulo</div>
+      <p>Presentar y analizar las técnicas de <strong>pronóstico</strong> que permiten estimar
+        el comportamiento futuro de las variables del proyecto. Aunque suelen asociarse a la
+        proyección de la demanda, sirven para proyectar cualquier variable. Ninguna técnica
+        garantiza exactitud: deben usarse como herramientas <em>complementarias</em>, apoyadas
+        en el juicio del analista.</p>
+    </div>
+
+    <nav class="cap-indice" aria-label="Contenido del capítulo">
+      <h2>Contenido del capítulo</h2>
+      <ol>
+        <li><a href="#s1"><span class="ix-num">5.1</span>El ámbito de la proyección</a></li>
+        <li><a href="#s2"><span class="ix-num">5.2</span>Métodos de proyección</a></li>
+        <li><a href="#s3"><span class="ix-num">5.3</span>Métodos cualitativos</a></li>
+        <li><a href="#s4"><span class="ix-num">5.4</span>Modelos causales</a></li>
+        <li><a href="#s5"><span class="ix-num">5.5</span>Modelos de series de tiempo</a></li>
+        <li><a href="#resumen"><span class="ix-num">§</span>Resumen</a></li>
+        <li><a href="#preguntas"><span class="ix-num">?</span>Preguntas y problemas</a></li>
+      </ol>
+    </nav>
+
+    <!-- ================= 5.1 ================= -->
+    <h2 id="s1"><span class="h-num">5.1</span> El ámbito de la proyección</h2>
+
+    <p>La validez de los resultados depende de la <strong>calidad de los datos de
+      entrada</strong>. La elección del método correcto depende de la cantidad y calidad de los
+      antecedentes, de los resultados esperados, del tiempo y del nivel de precisión deseados.
+      La efectividad del método se evalúa según tres criterios:</p>
+    <dl class="conceptos">
+      <div class="concepto"><dt>Precisión</dt>
+        <dd>Cualquier error tiene un costo asociado; el método debe reducir al mínimo el costo
+          del error.</dd></div>
+      <div class="concepto"><dt>Sensibilidad</dt>
+        <dd>Suficientemente estable para cambios lentos y dinámica para cambios agudos.</dd></div>
+      <div class="concepto"><dt>Objetividad</dt>
+        <dd>La información base debe garantizar su validez y oportunidad en una situación
+          histórica.</dd></div>
+    </dl>
+
+    <!-- ================= 5.2 ================= -->
+    <h2 id="s2"><span class="h-num">5.2</span> Métodos de proyección</h2>
+
+    <p>Las técnicas de proyección se clasifican, según su carácter, en tres grandes grupos:</p>
+    <div class="tabla-wrap">
+      <table>
+        <caption>Las tres familias de técnicas de proyección</caption>
+        <thead><tr><th>Familia</th><th>Fundamento</th><th>Cuándo se usa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cualitativos</strong><br>(subjetivos)</td>
+            <td>Opiniones de expertos.</td>
+            <td>Cuando el tiempo es escaso, faltan antecedentes mínimos o los datos no son
+              confiables (típico en proyectos de innovación).</td></tr>
+          <tr><td><strong>Modelos causales</strong></td>
+            <td>Relaciones causa-efecto: predicen una variable en función de otras, suponiendo
+              estable el grado de influencia de las causas.</td>
+            <td>Cuando se dispone de antecedentes cuantitativos históricos y variables
+              explicativas.</td></tr>
+          <tr><td><strong>Series de tiempo</strong></td>
+            <td>El comportamiento futuro se determina por lo sucedido en el pasado.</td>
+            <td>Cuando hay información histórica confiable y completa, y el contexto se mantiene
+              estable.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ================= 5.3 ================= -->
+    <h2 id="s3"><span class="h-num">5.3</span> Métodos cualitativos</h2>
+
+    <p>Se aplican cuando los métodos cuantitativos no explican por sí solos el comportamiento
+      futuro, o cuando se investigan aspectos del consumidor que ni él mismo conoce. La
+      <strong>etnografía</strong> —observar el comportamiento de las personas en su contexto—
+      es muy útil para contrastar lo que la gente <em>dice</em> que hace con lo que
+      <em>realmente</em> hace.</p>
+
+    <h3>Métodos basados en opiniones de expertos</h3>
+    <dl class="conceptos">
+      <div class="concepto"><dt>Método Delphi</dt>
+        <dd>Un panel de expertos responde series de cuestionarios <strong>anónimos</strong>, con
+          retroalimentación controlada tras cada ronda, hasta lograr la convergencia de
+          opiniones. Evita las distorsiones de los individuos dominantes y la presión grupal.</dd></div>
+      <div class="concepto"><dt>Consenso de panel</dt>
+        <dd>Similar al Delphi, pero <em>sin</em> anonimato y <em>sin</em> retroalimentación
+          dirigida. Riesgo: que emerja un grupo dominante que fuerce el consenso.</dd></div>
+      <div class="concepto"><dt>Pronósticos visionarios</dt>
+        <dd>Usa el conocimiento del personal interno de la empresa sobre sus clientes. Ventajas
+          de costo y rapidez; sesgo por las experiencias más recientes.</dd></div>
+      <div class="concepto"><dt>Analogía histórica</dt>
+        <dd>Supone que el mercado del proyecto se comportará como otro mercado lo hizo en el
+          pasado (otra marca, otra región o producto similar).</dd></div>
+    </dl>
+
+    <h3>Investigación de mercado y muestreo</h3>
+    <p>La <strong>investigación de mercado</strong> recolecta información mediante encuestas,
+      experimentos o mercados-prueba. Para muestrear existen dos métodos: el
+      <strong>probabilístico</strong> (cada elemento tiene la misma probabilidad de ser
+      muestreado) y el <strong>no probabilístico</strong> (la probabilidad no es igual para
+      toda la población). El cálculo del <strong>tamaño de la muestra</strong> es fundamental
+      para la confiabilidad de los resultados:</p>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 5.1 · Tamaño de la muestra</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>n</mi><mo>=</mo>
+          <mfrac>
+            <mrow><msup><mi>s</mi><mn>2</mn></msup><mo>·</mo><msup><mi>Z</mi><mn>2</mn></msup></mrow>
+            <msup><mi>e</mi><mn>2</mn></msup>
+          </mfrac>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>n</dt><dd>tamaño de la muestra</dd>
+        <dt>s²</dt><dd>varianza (desviación estándar al cuadrado), de otros estudios o de una prueba piloto</dd>
+        <dt>Z</dt><dd>valor crítico de la distribución normal para el nivel de confianza deseado (Z = 1,96 para 95 %)</dd>
+        <dt>e</dt><dd>nivel de error máximo permitido</dd>
+      </dl>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Tamaño de muestra para un nuevo aceite combinado</div>
+      <div class="ejemplo__cuerpo">
+        <p>Datos: media histórica de consumo 12 litros/año; desviación estándar de la prueba
+          piloto <em>s</em> = 3; error máximo permitido <em>e</em> = 0,3; nivel de confianza
+          95 % (<em>Z</em> = 1,96).</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>n</mi><mo>=</mo>
+            <mfrac>
+              <mrow><msup><mn>3</mn><mn>2</mn></msup><mo>·</mo><msup><mn>1,96</mn><mn>2</mn></msup></mrow>
+              <msup><mn>0,3</mn><mn>2</mn></msup>
+            </mfrac>
+            <mo>≈</mo><mn>385</mn>
+          </mrow>
+        </math>
+        <p class="resultado">Se requiere encuestar a 385 consumidores.</p>
+      </div>
+    </div>
+
+    <p>El cuestionario aplicado a la muestra emplea cuatro tipos de <strong>escalas</strong> de
+      medición:</p>
+    <div class="tabla-wrap">
+      <table>
+        <caption>Escalas de medición en investigación de mercado</caption>
+        <thead><tr><th>Escala</th><th>Qué pide al encuestado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nominal</strong></td><td>Mencionar la marca que usa, el medio donde
+            vio la publicidad, etc. Se mide en porcentaje.</td></tr>
+          <tr><td><strong>Ordinal</strong></td><td>Ordenar datos según su preferencia (p. ej.
+            calificar de 1 a 5).</td></tr>
+          <tr><td><strong>De intervalos</strong></td><td>Ubicar la respuesta en un rango (p. ej.
+            fuma entre 6 y 10 cigarrillos diarios).</td></tr>
+          <tr><td><strong>Proporcional</strong></td><td>Explicitar mediciones (volumen, peso,
+            distancia); sirve para confirmar respuestas.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>El muestreo <strong>no probabilístico</strong> se tipifica en tres categorías: de
+      <strong>estratos</strong> (estrato predeterminado de la población), de <strong>conveniencia
+      de sitio</strong> (lugar predeterminado) y de <strong>bola de nieve</strong> (las
+      respuestas iniciales guían encuestas posteriores).</p>
+
+    <!-- ================= 5.4 ================= -->
+    <h2 id="s4"><span class="h-num">5.4</span> Modelos causales</h2>
+
+    <p>Proyectan el mercado sobre la base de antecedentes <strong>cuantitativos
+      históricos</strong>, suponiendo que los factores condicionantes permanecerán estables.
+      Los más frecuentes son el modelo de regresión, el modelo econométrico y el modelo de
+      insumo-producto (coeficientes técnicos).</p>
+
+    <h3>El análisis de regresión</h3>
+    <p>Las causales explicativas son las <strong>variables independientes</strong>; la cantidad
+      demandada es la <strong>variable dependiente</strong>. Hay regresión <strong>simple</strong>
+      (una variable independiente) y <strong>múltiple</strong> (dos o más). El método de los
+      <strong>mínimos cuadrados</strong> determina la recta que minimiza la suma de las
+      desviaciones cuadráticas entre los valores reales y los estimados.</p>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 5.3 · Ecuación de regresión lineal</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>y</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>x</mi></mrow>
+      </math>
+      <dl class="vars">
+        <dt>y(x)</dt><dd>valor estimado de la variable dependiente</dd>
+        <dt>a</dt><dd>intersección con el eje <em>y</em> (valor de <em>y</em> cuando x = 0)</dd>
+        <dt>b</dt><dd>pendiente: cambio en <em>y</em> ante un cambio marginal en <em>x</em></dd>
+        <dt>x</dt><dd>valor específico de la variable independiente</dd>
+      </dl>
+    </div>
+
+    <div class="formula">
+      <span class="etq">Fórmulas 5.4 y 5.5 · Pendiente e intercepto (mínimos cuadrados)</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>b</mi><mo>=</mo>
+          <mfrac>
+            <mrow><mi>n</mi><mo>∑</mo><mi>x</mi><mi>y</mi><mo>−</mo><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo><mo>(</mo><mo>∑</mo><mi>y</mi><mo>)</mo></mrow>
+            <mrow><mi>n</mi><mo>∑</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow>
+          </mfrac>
+        </mrow>
+        <mspace width="2.5em"/>
+        <mrow><mi>a</mi><mo>=</mo><mover><mi>y</mi><mo>‾</mo></mover><mo>−</mo><mi>b</mi><mover><mi>x</mi><mo>‾</mo></mover></mrow>
+      </math>
+      <dl class="vars">
+        <dt>n</dt><dd>número de observaciones</dd>
+        <dt>x̄, ȳ</dt><dd>medias de las variables independiente y dependiente</dd>
+      </dl>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Regresión lineal de la demanda histórica</div>
+      <div class="ejemplo__cuerpo">
+        <p>Antecedentes históricos de demanda de un producto (cuadros 5.1 y 5.2):</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Demanda histórica observada</caption>
+            <thead><tr><th>Año</th><th class="num">2002</th><th class="num">2003</th><th class="num">2004</th><th class="num">2005</th><th class="num">2006</th><th class="num">2007</th><th class="num">2008</th><th class="num">2009</th><th class="num">2010</th><th class="num">2011</th><th class="num">2012</th></tr></thead>
+            <tbody>
+              <tr><td>N.º muestra</td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">6</td><td class="num">7</td><td class="num">8</td><td class="num">9</td><td class="num">10</td><td class="num">11</td></tr>
+              <tr><td>Demanda</td><td class="num">10</td><td class="num">20</td><td class="num">30</td><td class="num">45</td><td class="num">70</td><td class="num">90</td><td class="num">125</td><td class="num">150</td><td class="num">180</td><td class="num">220</td><td class="num">270</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Aplicando los mínimos cuadrados, la línea de tendencia obtenida es:</p>
+        <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow><mi>y</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>43,54</mn><mo>+</mo><mn>25,59</mn><mi>x</mi></mrow>
+        </math>
+        <p>El coeficiente de determinación es <strong>R² = 0,958</strong>: el 96 % de la
+          variación de la demanda se explica por la variación temporal. El modelo proyecta para
+          2013 una demanda de <strong>263,54</strong> (miles de unidades).</p>
+        <p class="resultado">y(x) = 43,54 + 25,59·x · R² = 0,958 · Demanda 2013 ≈ 263,54 mil unidades.</p>
+      </div>
+    </div>
+
+    <h3>Precisión y confiabilidad de la regresión</h3>
+    <p>El <strong>coeficiente de determinación r²</strong> indica qué proporción de la variación
+      total de <em>y</em> se explica por las variables independientes; toma valores entre 0 y 1
+      —cuanto más alto, más confiable el estimado—.</p>
+
+    <div class="formula">
+      <span class="etq">Fórmula 5.11 · Coeficiente de determinación</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo>
+          <mfrac>
+            <msup><mrow><mo>[</mo><mi>n</mi><mo>∑</mo><mi>x</mi><mi>y</mi><mo>−</mo><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo><mo>(</mo><mo>∑</mo><mi>y</mi><mo>)</mo><mo>]</mo></mrow><mn>2</mn></msup>
+            <mrow><mo>[</mo><mi>n</mi><mo>∑</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>]</mo><mo>[</mo><mi>n</mi><mo>∑</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><mi>y</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>]</mo></mrow>
+          </mfrac>
+        </mrow>
+      </math>
+    </div>
+
+    <div class="formula">
+      <span class="etq">Fórmula 5.13 · Error estándar de la estimación</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>Se</mi></msub><mo>=</mo>
+          <msqrt>
+            <mfrac>
+              <mrow><mo>∑</mo><msup><mi>y</mi><mn>2</mn></msup><mo>−</mo><mi>a</mi><mo>∑</mo><mi>y</mi><mo>−</mo><mi>b</mi><mo>∑</mo><mi>x</mi><mi>y</mi></mrow>
+              <mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow>
+            </mfrac>
+          </msqrt>
+        </mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.6rem">En el ejemplo, <em>Se</em> = 18,60. Si los
+        errores se distribuyen normalmente, hay 68 % de probabilidad de que el valor real esté
+        en <em>ŷ</em> ± Se, 95 % en <em>ŷ</em> ± 2·Se y 99 % en <em>ŷ</em> ± 3·Se. Para 2013:
+        intervalo de confianza del 95 % entre <strong>226,34 y 300,74</strong>.</p>
+    </div>
+
+    <p>Cuando los datos no se ajustan a una recta, se usa una <strong>función
+      exponencial</strong>: <em>y(x) = a·x<sup>g</sup></em>, donde <em>g</em> es la tasa de
+      crecimiento porcentual constante. La <strong>regresión múltiple</strong> generaliza la
+      ecuación a varias variables independientes:</p>
+
+    <div class="formula">
+      <span class="etq">Fórmula 5.16 · Regresión múltiple</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>Y</mi><mo>=</mo><mi>a</mi><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><msub><mi>x</mi><mi>n</mi></msub></mrow>
+      </math>
+    </div>
+
+    <p>Otros modelos causales: el <strong>econométrico</strong> (sistema de ecuaciones que
+      interrelaciona sectores de la economía; modelo de corto plazo) y el de
+      <strong>insumo-producto</strong> o de coeficientes técnicos (matriz de relaciones
+      interindustriales con coeficientes técnicos fijos).</p>
+
+    <!-- ================= 5.5 ================= -->
+    <h2 id="s5"><span class="h-num">5.5</span> Modelos de series de tiempo</h2>
+
+    <p>Miden los valores de una variable en el tiempo, a intervalos uniformes, para identificar
+      un patrón básico de comportamiento. Una serie cronológica tiene <strong>cuatro
+      componentes</strong>:</p>
+    <dl class="conceptos">
+      <div class="concepto"><dt>Tendencia</dt>
+        <dd>Crecimiento o declinación de largo plazo del valor promedio de la variable.</dd></div>
+      <div class="concepto"><dt>Componente cíclico</dt>
+        <dd>Divergencias respecto de la tendencia por fuerzas económicas, sociales y políticas;
+          sin patrones constantes.</dd></div>
+      <div class="concepto"><dt>Componente estacional</dt>
+        <dd>Fluctuaciones que se repiten periódicamente (clima, tradición).</dd></div>
+      <div class="concepto"><dt>Componente no sistemático (aleatorio)</dt>
+        <dd>Desviación no explicada por los anteriores. En pronósticos cortos pasa a ser
+          primordial; la tendencia, la menos importante.</dd></div>
+    </dl>
+
+    <h3>Promedios móviles</h3>
+    <p>Una serie con fuerte efecto estacional recomienda el uso de un <strong>promedio móvil
+      (Pm)</strong> de un número determinado de periodos (habitualmente cuatro trimestres):</p>
+
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 5.18 · Promedio móvil</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>Pm</mi><mo>=</mo>
+          <mfrac>
+            <mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>T</mi><mi>i</mi></msub></mrow>
+            <mi>n</mi>
+          </mfrac>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>Tᵢ</dt><dd>valor de la variable en el periodo <em>i</em></dd>
+        <dt>n</dt><dd>número de periodos observados</dd>
+      </dl>
+    </div>
+
+    <p>Como cada Pm queda «entre» dos periodos, se calcula el <strong>promedio móvil centrado
+      (PMC)</strong> y, dividiendo la demanda real entre el PMC, el <strong>índice estacional
+      (IE)</strong>:</p>
+    <div class="formula">
+      <span class="etq">Fórmulas 5.21 y 5.22 · Promedio móvil centrado e índice estacional</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mi>PMC</mi><mn>1</mn></msub><mo>=</mo>
+          <mfrac><mrow><msub><mi>Pm</mi><mn>1</mn></msub><mo>+</mo><msub><mi>Pm</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac>
+        </mrow>
+        <mspace width="2.5em"/>
+        <mrow><msub><mi>IE</mi></msub><mo>=</mo>
+          <mfrac><msub><mi>T</mi></msub><msub><mi>PMC</mi></msub></mfrac>
+        </mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.6rem">La suma de los IE de los cuatro trimestres
+        debe ser igual a 4.</p>
+    </div>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Proyección estacional de la demanda 2013</div>
+      <div class="ejemplo__cuerpo">
+        <p>A partir de la demanda estacional histórica 2002-2012, se calculan los promedios
+          móviles centrados y los índices estacionales de cada estación. Los índices promedio,
+          ajustados para que sumen 4, resultan:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Índices estacionales ajustados</caption>
+            <thead><tr><th>Estación</th><th class="num">Invierno</th><th class="num">Primavera</th><th class="num">Verano</th><th class="num">Otoño</th><th class="num">Suma</th></tr></thead>
+            <tbody>
+              <tr><td>Índice estacional (IE)</td><td class="num">0,918</td><td class="num">1,289</td><td class="num">1,446</td><td class="num">0,347</td><td class="num">4,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La demanda total proyectada para 2013 (263,54 mil unidades) se divide entre 4
+          (65,885) y se multiplica por cada índice estacional:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Demanda estacional proyectada 2013</caption>
+            <thead><tr><th>Estación</th><th class="num">Cálculo</th><th class="num">Demanda</th></tr></thead>
+            <tbody>
+              <tr><td>Invierno</td><td class="num">65,885 × 0,918</td><td class="num">60,482</td></tr>
+              <tr><td>Primavera</td><td class="num">65,885 × 1,289</td><td class="num">84,926</td></tr>
+              <tr><td>Verano</td><td class="num">65,885 × 1,446</td><td class="num">95,270</td></tr>
+              <tr><td>Otoño</td><td class="num">65,885 × 0,347</td><td class="num">22,862</td></tr>
+              <tr class="total"><td>Total 2013</td><td class="num"></td><td class="num">263,540</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">El modelo distribuye la demanda anual según el patrón estacional
+          histórico, concentrando las ventas en verano y primavera.</p>
+      </div>
+    </div>
+
+    <h3>Afinamiento exponencial y selección del método</h3>
+    <p>El <strong>afinamiento exponencial</strong> pondera la demanda real del periodo y el
+      pronóstico realizado para ese periodo:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Fórmula 5.27 · Afinamiento exponencial</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><msub><mover><mi>Y</mi><mo>^</mo></mover><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo>
+          <mi>a</mi><mo>·</mo><msub><mi>Y</mi><mi>t</mi></msub><mo>+</mo>
+          <mo>(</mo><mn>1</mn><mo>−</mo><mi>a</mi><mo>)</mo><mo>·</mo><msub><mover><mi>Y</mi><mo>^</mo></mover><mi>t</mi></msub>
+        </mrow>
+      </math>
+      <dl class="vars">
+        <dt>a</dt><dd>constante de afinamiento (0 ≤ a ≤ 1)</dd>
+        <dt>Yₜ</dt><dd>demanda real del periodo vigente</dd>
+        <dt>Ŷₜ</dt><dd>pronóstico de la demanda hecho para el periodo vigente</dd>
+      </dl>
+    </div>
+    <p>Para decidir cuál promedio móvil o cuál valor de <em>a</em> conduce a una mejor
+      proyección se calcula la <strong>desviación típica (DT)</strong>, y se elige la de menor
+      desviación:</p>
+    <div class="formula">
+      <span class="etq">Fórmula 5.28 · Desviación típica</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>DT</mi><mo>=</mo>
+          <msqrt>
+            <mfrac>
+              <mrow><msubsup><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>(</mo><msub><mi>Y</mi><mi>x</mi></msub><mo>−</mo><msub><mover><mi>Y</mi><mo>^</mo></mover><mi>x</mi></msub><mo>)</mo></mrow><mn>2</mn></msup></mrow>
+              <mi>n</mi>
+            </mfrac>
+          </msqrt>
+        </mrow>
+      </math>
+      <p style="font-size:.92rem;margin-top:.6rem">En el ejemplo del libro, el promedio móvil
+        de <strong>3 años (DT = 7,39)</strong> resultó mejor que el de 5 años (DT = 9,24); y en
+        el afinamiento exponencial, <strong>a = 0,40 (DT = 6,17)</strong> resultó mejor que
+        a = 0,30 (DT = 6,20).</p>
+    </div>
+
+    <!-- ================= RESUMEN ================= -->
+    <section class="resumen" id="resumen">
+      <h2>Resumen</h2>
+      <p>La validez de cualquier pronóstico depende de la calidad de los antecedentes: su
+        cantidad, oportunidad y veracidad determinan la selección del método. Las técnicas se
+        clasifican en cualitativas, causales y de series de tiempo.</p>
+      <p>Los métodos <strong>cualitativos</strong> se basan en opiniones de expertos (Delphi,
+        consenso de panel, investigación de mercado, pronósticos visionarios, analogía
+        histórica) y se usan cuando el tiempo es escaso o faltan datos confiables. Los modelos
+        <strong>causales</strong> (regresión, econométrico, insumo-producto) se basan en
+        antecedentes cuantitativos históricos y suponen la permanencia de las condicionantes.
+        Los modelos de <strong>series de tiempo</strong> (promedios móviles, afinamiento
+        exponencial) estiman el futuro por lo sucedido en el pasado; cualquier cambio del
+        contexto los invalida.</p>
+      <p>Dado que pueden darse en el futuro combinaciones nuevas de las variables, el uso
+        <strong>complementario de más de una técnica</strong> es lo más recomendable.</p>
+    </section>
+
+    <!-- ================= PREGUNTAS ================= -->
+    <section class="preguntas" id="preguntas">
+      <h2>Preguntas y problemas</h2>
+      <ol>
+        <li>Analice las variables más determinantes para seleccionar una técnica de proyección.</li>
+        <li>Explique de qué depende el grado de validez del resultado de una proyección.</li>
+        <li>Explique las principales debilidades de las encuestas y cómo podrían subsanarse.</li>
+        <li>Explique los conceptos de precisión, sensibilidad y objetividad del método de
+          pronóstico.</li>
+        <li>Explique las características y diferencias de los métodos cualitativos, causales y
+          de series de tiempo.</li>
+        <li>¿Qué validez tienen los resultados de los métodos Delphi y consenso de panel?</li>
+        <li>Defina la línea de tendencia de un conjunto de observaciones de distancias y tiempos
+          de entrega.</li>
+        <li>Calcule el error estándar de la estimación con los datos del problema anterior.</li>
+        <li>Calcule el coeficiente de correlación y explique el significado del resultado.</li>
+        <li>Explique las características y el uso del modelo econométrico.</li>
+        <li>Analice en qué consisten y en qué se diferencian los componentes de tendencia,
+          cíclicos, estacionales y no sistemáticos.</li>
+        <li>Calcule por el método de los promedios móviles la demanda esperada para el primer
+          trimestre de 2013, dada la demanda trimestral de 2012.</li>
+        <li>Calcule la demanda trimestral de un año que incorpore el efecto estacional.</li>
+        <li>Determine la línea de regresión, el coeficiente de determinación y el error estándar
+          con los antecedentes dados (Σx, Σy, Σxy, Σx², Σy²).</li>
+        <li>Pronostique la demanda por promedios móviles con tres y cinco años y determine en
+          cuál se tendría mayor confianza.</li>
+        <li>Comente: «Las técnicas econométricas siempre serán más confiables que los demás
+          métodos de proyección.»</li>
+        <li>Comente: «El modelo de regresión múltiple, por su complejidad matemática, garantiza
+          una mejor apreciación de la demanda futura.»</li>
+      </ol>
+    </section>
+
+    <!-- ================= BIBLIOGRAFÍA ================= -->
+    <section class="biblio">
+      <h2>Bibliografía del capítulo</h2>
+      <ul>
+        <li>Anderson, D. R., Sweeney, D. J. y Williams, T. A. <em>Essentials of Statistics for Business and Economics</em>. Cengage Learning, 2010.</li>
+        <li>Chambers, J., Mullick, S. y Smith, D. <em>Cómo elegir la técnica de pronóstico correcta</em>. Biblioteca Harvard.</li>
+        <li>Dervitsiotis, Kostas N. <em>Operations Management</em>. Nueva York: McGraw-Hill, 1981.</li>
+        <li>Hanke, John E. <em>Pronósticos en los negocios</em>. Pearson Education, 2006.</li>
+        <li>Kinnear, T. y Taylor, J. <em>Investigación de mercados</em>. Bogotá: McGraw-Hill, 1998.</li>
+        <li>Lira, Ricardo. <em>Modelos econométricos de demanda</em>. Santiago: PUC-Chile, 1976.</li>
+        <li>Páramo, Dagoberto. <em>La etnografía: una aproximación antropológica al estudio del comportamiento del consumidor</em>, 2010.</li>
+      </ul>
+    </section>
+
+    <nav class="cap-nav" aria-label="Navegación entre capítulos">
+      <a class="prev" href="capitulo-04.html">
+        <span class="dir">◀ Capítulo anterior</span>
+        <span class="ttl">4 · El estudio de mercado</span>
+      </a>
+      <a class="next" href="capitulo-06.html">
+        <span class="dir">Capítulo siguiente ▶</span>
+        <span class="ttl">6 · Estimación de costos</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo.</p>
+  </div>
+</footer>
+
+</body>
+</html>
