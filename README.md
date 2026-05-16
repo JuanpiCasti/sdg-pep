@@ -25,30 +25,6 @@ Todo el contenido está en español.
 
 ---
 
-## Cómo verlo
-
-No hay nada que compilar ni instalar. Basta con abrir `index.html` en un navegador.
-
-### Opción A — abrir el archivo directamente
-
-Hacé doble clic en `index.html` o arrastralo al navegador. Funciona con `file://`.
-
-> Nota: las tipografías se cargan desde Google Fonts (CDN). Sin conexión a
-> internet el contenido se ve igual, pero con tipografías de respaldo del sistema.
-
-### Opción B — servidor local
-
-Para una vista más fiel (y evitar restricciones de algunos navegadores con
-`file://`), conviene servir la carpeta con un servidor HTTP simple:
-
-```bash
-python3 -m http.server 4321
-```
-
-Luego abrí <http://localhost:4321/index.html> en el navegador.
-
----
-
 ## Estructura del proyecto
 
 ```
