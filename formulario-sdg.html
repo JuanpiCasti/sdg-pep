@@ -79,10 +79,10 @@
         <li><a href="#f12"><span class="ix-num">12</span>Capital de trabajo</a></li>
         <li><a href="#f13"><span class="ix-num">13</span>Valores de desecho</a></li>
         <li><a href="#f14"><span class="ix-num">14</span>Flujos de caja</a></li>
+        <li><a href="#fte"><span class="ix-num">TE</span>Tasas equivalentes</a></li>
         <li><a href="#fflujo"><span class="ix-num">FF</span>Flujo de fondos del inversionista</a></li>
         <li><a href="#f15"><span class="ix-num">15</span>Criterios de evaluación</a></li>
         <li><a href="#f16"><span class="ix-num">16</span>Costo de capital</a></li>
-        <li><a href="#f17"><span class="ix-num">17</span>Análisis de riesgo</a></li>
       </ol>
     </nav>
 
@@ -213,6 +213,25 @@
     </section>
 
     <section class="f-grupo">
+    <!-- ===== TASAS EQUIVALENTES ===== -->
+    <h2 id="fte"><span class="h-num">TE</span> Tasas equivalentes — <a href="creditos.html">créditos</a></h2>
+    <div class="formula">
+      <span class="etq">Tasa efectiva a partir de la tasa nominal</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>i</mi><mo>(</mo><mi>w</mi><mo>)</mo><mo>=</mo><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>J</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>·</mo><mfrac><mi>t</mi><mi>ut</mi></mfrac><mo>)</mo></mrow><mrow><mi>w</mi><mo>/</mo><mi>t</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow>
+      </math>
+      <dl class="vars">
+        <dt>i</dt><dd>tasa efectiva</dd>
+        <dt>J</dt><dd>tasa nominal</dd>
+        <dt>t</dt><dd>período en días</dd>
+        <dt>w</dt><dd>días en que está expresada la tasa efectiva</dd>
+        <dt>ut</dt><dd>unidad de tiempo</dd>
+      </dl>
+    </div>
+
+    </section>
+
+    <section class="f-grupo">
     <!-- ===== FLUJO DE FONDOS ===== -->
     <h2 id="fflujo"><span class="h-num">FF</span> Flujo de fondos del inversionista — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
     <div class="tabla-wrap">
@@ -309,35 +328,6 @@
       <dl class="vars">
         <dt>Rf</dt><dd>tasa libre de riesgo</dd><dt>E(Rm)</dt><dd>retorno esperado del mercado</dd>
         <dt>β</dt><dd>riesgo sistemático</dd>
-      </dl>
-    </div>
-
-    </section>
-
-    <section class="f-grupo">
-    <!-- ===== CAP 17 ===== -->
-    <h2 id="f17"><span class="h-num">17</span> Análisis de riesgo — <a href="capitulos/capitulo-17.html">cap. 17</a></h2>
-    <div class="formula">
-      <span class="etq">Valor esperado · desviación estándar · coeficiente de variación</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
-        <mrow><mover><mi>A</mi><mo>‾</mo></mover><mo>=</mo><mo>∑</mo><msub><mi>A</mi><mi>x</mi></msub><msub><mi>P</mi><mi>x</mi></msub></mrow>
-        <mspace width="1.5em"/>
-        <mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><msup><mrow><mo>(</mo><msub><mi>A</mi><mi>x</mi></msub><mo>−</mo><mover><mi>A</mi><mo>‾</mo></mover><mo>)</mo></mrow><mn>2</mn></msup><msub><mi>P</mi><mi>x</mi></msub></mrow></msqrt></mrow>
-        <mspace width="1.5em"/>
-        <mrow><mi>v</mi><mo>=</mo><mfrac><mi>σ</mi><mover><mi>A</mi><mo>‾</mo></mover></mfrac></mrow>
-      </mrow></math>
-      <dl class="vars">
-        <dt>Aₓ</dt><dd>flujo de la posibilidad x</dd><dt>Pₓ</dt><dd>probabilidad de x</dd>
-        <dt>v</dt><dd>coeficiente de variación</dd>
-      </dl>
-    </div>
-    <div class="formula">
-      <span class="etq">Tasa de descuento ajustada por riesgo</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-        <mrow><mi>f</mi><mo>=</mo><mi>i</mi><mo>+</mo><mi>p</mi></mrow>
-      </math>
-      <dl class="vars">
-        <dt>f</dt><dd>tasa ajustada</dd><dt>i</dt><dd>tasa libre de riesgo</dd><dt>p</dt><dd>prima por riesgo</dd>
       </dl>
     </div>
 
