@@ -210,6 +210,75 @@
       </dl>
     </div>
 
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Flujo del inversionista (continúa el proyecto de la sección 14.3)</div>
+      <div class="ejemplo__cuerpo">
+        <p>El inversionista financia parte de la inversión con un <strong>préstamo de $80 000</strong>
+          (en miles) a una tasa real del 8 %, pagadero en 8 cuotas anuales iguales. Aplicando la
+          fórmula 14.1, la cuota es <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo>=</mo><mn>80 000</mn><mo>·</mo><mfrac><mrow><mn>0,08</mn><msup><mrow><mo>(</mo><mn>1,08</mn><mo>)</mo></mrow><mn>8</mn></msup></mrow><mrow><msup><mrow><mo>(</mo><mn>1,08</mn><mo>)</mo></mrow><mn>8</mn></msup><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>13 921</mn></mrow></math>.
+          La tabla de desarrollo del crédito descompone cada cuota entre interés (sobre el saldo)
+          y amortización del principal:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 14.7 · Tabla de desarrollo del crédito (miles de $)</caption>
+            <thead><tr><th>Año</th><th class="num">Saldo deuda</th><th class="num">Cuota</th><th class="num">Interés</th><th class="num">Amortización</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td class="num">80 000</td><td class="num">13 921</td><td class="num">6 400</td><td class="num">7 521</td></tr>
+              <tr><td>2</td><td class="num">72 479</td><td class="num">13 921</td><td class="num">5 798</td><td class="num">8 123</td></tr>
+              <tr><td>3</td><td class="num">64 356</td><td class="num">13 921</td><td class="num">5 148</td><td class="num">8 773</td></tr>
+              <tr><td>4</td><td class="num">55 583</td><td class="num">13 921</td><td class="num">4 447</td><td class="num">9 474</td></tr>
+              <tr><td>5</td><td class="num">46 108</td><td class="num">13 921</td><td class="num">3 689</td><td class="num">10 232</td></tr>
+              <tr><td>6</td><td class="num">35 876</td><td class="num">13 921</td><td class="num">2 870</td><td class="num">11 051</td></tr>
+              <tr><td>7</td><td class="num">24 825</td><td class="num">13 921</td><td class="num">1 986</td><td class="num">11 935</td></tr>
+              <tr><td>8</td><td class="num">12 890</td><td class="num">13 921</td><td class="num">1 031</td><td class="num">12 890</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Al incorporar el préstamo, los intereses y la amortización de capital al flujo del
+          proyecto, se obtiene el flujo del inversionista (estructura del cuadro 14.6):</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 14.8 · Flujo de caja del inversionista (reconstruido, miles de $)</caption>
+            <thead><tr><th>Concepto</th><th class="num">0</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">6</th><th class="num">7</th><th class="num">8</th><th class="num">9</th><th class="num">10</th></tr></thead>
+            <tbody>
+              <tr><td>EBITDA</td><td class="num">—</td><td class="num">18 700</td><td class="num">18 700</td><td class="num">23 600</td><td class="num">23 600</td><td class="num">23 600</td><td class="num">28 840</td><td class="num">28 840</td><td class="num">31 340</td><td class="num">28 840</td><td class="num">28 840</td></tr>
+              <tr><td>(−) Intereses del préstamo</td><td class="num">—</td><td class="num">(6 400)</td><td class="num">(5 798)</td><td class="num">(5 148)</td><td class="num">(4 447)</td><td class="num">(3 689)</td><td class="num">(2 870)</td><td class="num">(1 986)</td><td class="num">(1 031)</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>(−) Gastos no desembolsables</td><td class="num">—</td><td class="num">(8 200)</td><td class="num">(8 200)</td><td class="num">(8 200)</td><td class="num">(8 200)</td><td class="num">(8 200)</td><td class="num">(9 200)</td><td class="num">(9 200)</td><td class="num">(11 200)</td><td class="num">(9 200)</td><td class="num">(9 200)</td></tr>
+              <tr><td>Resultado antes de impuesto</td><td class="num">—</td><td class="num">4 100</td><td class="num">4 702</td><td class="num">10 252</td><td class="num">10 953</td><td class="num">11 711</td><td class="num">16 770</td><td class="num">17 654</td><td class="num">19 109</td><td class="num">19 640</td><td class="num">19 640</td></tr>
+              <tr><td>(−) Impuesto (20 %)</td><td class="num">—</td><td class="num">(820)</td><td class="num">(940)</td><td class="num">(2 050)</td><td class="num">(2 191)</td><td class="num">(2 342)</td><td class="num">(3 354)</td><td class="num">(3 531)</td><td class="num">(3 822)</td><td class="num">(3 928)</td><td class="num">(3 928)</td></tr>
+              <tr><td>(+) Ajuste gastos no desembolsables</td><td class="num">—</td><td class="num">8 200</td><td class="num">8 200</td><td class="num">8 200</td><td class="num">8 200</td><td class="num">8 200</td><td class="num">9 200</td><td class="num">9 200</td><td class="num">11 200</td><td class="num">9 200</td><td class="num">9 200</td></tr>
+              <tr><td>Resultado operacional neto</td><td class="num">—</td><td class="num">11 480</td><td class="num">11 962</td><td class="num">16 402</td><td class="num">16 962</td><td class="num">17 569</td><td class="num">22 616</td><td class="num">23 323</td><td class="num">26 487</td><td class="num">24 912</td><td class="num">24 912</td></tr>
+              <tr><td>(−) Inversiones</td><td class="num">(124 350)</td><td class="num">—</td><td class="num">(50)</td><td class="num">—</td><td class="num">—</td><td class="num">(20 380)</td><td class="num">—</td><td class="num">—</td><td class="num">(10 000)</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>(+) Valor de desecho</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">139 117</td></tr>
+              <tr><td>(+) Préstamo</td><td class="num">80 000</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>(−) Amortización de la deuda</td><td class="num">—</td><td class="num">(7 521)</td><td class="num">(8 123)</td><td class="num">(8 773)</td><td class="num">(9 474)</td><td class="num">(10 232)</td><td class="num">(11 051)</td><td class="num">(11 935)</td><td class="num">(12 890)</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr class="total"><td>Flujo de caja</td><td class="num">(44 350)</td><td class="num">3 959</td><td class="num">3 789</td><td class="num">7 629</td><td class="num">7 488</td><td class="num">(13 043)</td><td class="num">11 565</td><td class="num">11 388</td><td class="num">3 597</td><td class="num">24 912</td><td class="num">164 029</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">En el momento cero la inversión neta del inversionista se reduce de
+          $124 350 a <strong>$44 350</strong>: el préstamo de $80 000 cubre el resto. Por eso la
+          rentabilidad del patrimonio (el libro declara <strong>21,97 %</strong>) supera a la de
+          los activos (<strong>15,77 %</strong>): el apalancamiento agrega valor mientras el costo
+          de la deuda sea menor que la rentabilidad del proyecto.</p>
+      </div>
+    </div>
+
+    <div class="caja caja--nota">
+      <div class="caja__tit">Sobre el cuadro 14.8 del libro</div>
+      <p>En la 6.ª edición impresa, la tabla rotulada «Cuadro 14.8» reproduce por error el
+        <strong>cuadro 14.5</strong> (el flujo del <em>proyecto</em>, con inversión inicial de
+        $124 350 y sin filas de préstamo, intereses ni amortización). Sin embargo, el texto que la
+        precede afirma que el cuadro 14.8 <em>sí</em> incorpora el préstamo, los intereses anuales
+        y la amortización de capital, y que «en el momento cero la inversión neta se reduce a
+        $44 350». Es una errata de imprenta — una contradicción interna del propio libro — no
+        documentada oficialmente. El cuadro 14.8 que se muestra arriba es la reconstrucción
+        correcta a partir de esa descripción y del cuadro 14.7. Las TIR calculadas pueden diferir
+        en torno a 0,7 puntos de las que declara el libro, porque el ejemplo original arrastra
+        inconsistencias de redondeo (ni el flujo del proyecto bien impreso reproduce con exactitud
+        el 15,77 % que el texto enuncia).</p>
+    </div>
+
     <h3>El beneficio tributario de la deuda</h3>
     <p>Como los gastos financieros se deducen de la base imponible, el endeudamiento genera un
       <strong>ahorro tributario</strong>. Por eso el <em>costo de la deuda</em> difiere del
