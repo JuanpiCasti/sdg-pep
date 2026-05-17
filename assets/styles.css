@@ -993,4 +993,19 @@ figcaption b { color: var(--azul); }
     display: inline; color: #333;
   }
   body.doc-formulario dl.vars dt::after { content: " "; }
+
+  /* Tabla del flujo de fondos, compacta dentro de una columna */
+  body.doc-formulario .tabla-wrap { margin: 1.6mm 0 0; }
+  body.doc-formulario .flujo-fondos {
+    font-size: 7pt; border-collapse: collapse; width: 100%;
+  }
+  body.doc-formulario .flujo-fondos caption {
+    font-size: 6.6pt; text-align: left; margin-bottom: .6mm;
+  }
+  body.doc-formulario .flujo-fondos td {
+    padding: .35mm 1mm; border: 0; color: #000;
+  }
+  body.doc-formulario .flujo-fondos .sub td,
+  body.doc-formulario .flujo-fondos .total td { font-weight: 700; }
+  body.doc-formulario .flujo-fondos .total td { border-top: .6pt solid #000; }
 }
