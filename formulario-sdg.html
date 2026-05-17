@@ -48,6 +48,7 @@
       </details>
       <a href="formulario.html">Formulario</a>
       <a href="formulario-sdg.html">Formulario SDG</a>
+      <a href="creditos.html">Créditos</a>
       <a href="glosario.html">Glosario</a>
     </nav>
   </div>
@@ -74,7 +75,6 @@
       <h2>Índice</h2>
       <ol>
         <li><a href="#f4"><span class="ix-num">4</span>Estrategia de precios (mark-up)</a></li>
-        <li><a href="#f5"><span class="ix-num">5</span>Técnicas de proyección</a></li>
         <li><a href="#f6"><span class="ix-num">6</span>Costos y punto de equilibrio</a></li>
         <li><a href="#f12"><span class="ix-num">12</span>Capital de trabajo</a></li>
         <li><a href="#f13"><span class="ix-num">13</span>Valores de desecho</a></li>
@@ -99,47 +99,6 @@
       <dl class="vars">
         <dt>Pv</dt><dd>precio de venta</dd><dt>Cu</dt><dd>costo unitario</dd>
         <dt>j</dt><dd>margen sobre el precio</dd><dt>h</dt><dd>margen sobre los costos</dd>
-      </dl>
-    </div>
-
-    </section>
-
-    <section class="f-grupo">
-    <!-- ===== CAP 5 ===== -->
-    <h2 id="f5"><span class="h-num">5</span> Técnicas de proyección — <a href="capitulos/capitulo-05.html">cap. 5</a></h2>
-    <div class="formula">
-      <span class="etq">Tamaño de la muestra</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-        <mrow><mi>n</mi><mo>=</mo><mfrac><mrow><msup><mi>s</mi><mn>2</mn></msup><msup><mi>Z</mi><mn>2</mn></msup></mrow><msup><mi>e</mi><mn>2</mn></msup></mfrac></mrow>
-      </math>
-      <dl class="vars">
-        <dt>n</dt><dd>tamaño de la muestra</dd><dt>s²</dt><dd>varianza</dd>
-        <dt>Z</dt><dd>valor crítico de la distribución normal</dd><dt>e</dt><dd>error máximo permitido</dd>
-      </dl>
-    </div>
-    <div class="formula">
-      <span class="etq">Regresión lineal · mínimos cuadrados</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
-        <mrow><mi>y</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>x</mi></mrow>
-        <mspace width="2em"/>
-        <mrow><mi>b</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mo>∑</mo><mi>xy</mi><mo>−</mo><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo><mo>(</mo><mo>∑</mo><mi>y</mi><mo>)</mo></mrow><mrow><mi>n</mi><mo>∑</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><msup><mrow><mo>(</mo><mo>∑</mo><mi>x</mi><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow>
-        <mspace width="1.5em"/>
-        <mrow><mi>a</mi><mo>=</mo><mover><mi>y</mi><mo>‾</mo></mover><mo>−</mo><mi>b</mi><mover><mi>x</mi><mo>‾</mo></mover></mrow>
-      </mrow></math>
-    </div>
-    <div class="formula">
-      <span class="etq">Promedio móvil · índice estacional · afinamiento exponencial</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
-        <mrow><mi>Pm</mi><mo>=</mo><mfrac><mrow><mo>∑</mo><msub><mi>T</mi><mi>i</mi></msub></mrow><mi>n</mi></mfrac></mrow>
-        <mspace width="1.5em"/>
-        <mrow><mi>IE</mi><mo>=</mo><mfrac><mi>T</mi><mi>PMC</mi></mfrac></mrow>
-        <mspace width="1.5em"/>
-        <mrow><msub><mover><mi>Y</mi><mo>^</mo></mover><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>a</mi><msub><mi>Y</mi><mi>t</mi></msub><mo>+</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>a</mi><mo>)</mo><msub><mover><mi>Y</mi><mo>^</mo></mover><mi>t</mi></msub></mrow>
-      </mrow></math>
-      <dl class="vars">
-        <dt>Tᵢ</dt><dd>valor de la variable en el periodo i</dd>
-        <dt>PMC</dt><dd>promedio móvil centrado</dd>
-        <dt>a</dt><dd>constante de afinamiento (0 ≤ a ≤ 1)</dd>
       </dl>
     </div>
 
@@ -207,7 +166,7 @@
 
     <section class="f-grupo">
     <!-- ===== CAP 14 ===== -->
-    <h2 id="f14"><span class="h-num">14</span> Flujos de caja — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
+    <h2 id="f14"><span class="h-num">14</span> Flujos de caja — <a href="capitulos/capitulo-14.html">cap. 14</a> · <a href="creditos.html">créditos</a></h2>
     <div class="formula">
       <span class="etq">Cuota de un préstamo · costo efectivo de la deuda</span>
       <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
@@ -218,6 +177,24 @@
       <dl class="vars">
         <dt>C</dt><dd>valor de la cuota</dd><dt>P</dt><dd>monto del préstamo</dd>
         <dt>n</dt><dd>número de cuotas</dd><dt>CED / CD</dt><dd>costo efectivo / costo de la deuda</dd>
+      </dl>
+    </div>
+    <div class="formula">
+      <span class="etq">Sistemas de amortización · interés común Iₜ = Sₜ₋₁·i, cuota Cₜ = Iₜ + Aₜ</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><mtext>Francés:</mtext><mspace width=".5em"/><mi>C</mi><mtext> fija</mtext><mo>,</mo><mspace width=".6em"/><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><mi>C</mi><mo>−</mo><msub><mi>I</mi><mi>t</mi></msub></mrow>
+      </mrow></math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><mtext>Alemán:</mtext><mspace width=".5em"/><mi>A</mi><mo>=</mo><mfrac><mi>P</mi><mi>n</mi></mfrac><mtext> fija</mtext><mo>,</mo><mspace width=".6em"/><msub><mi>C</mi><mi>t</mi></msub><mo>=</mo><mi>A</mi><mo>+</mo><msub><mi>I</mi><mi>t</mi></msub></mrow>
+      </mrow></math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><mtext>Americano:</mtext><mspace width=".5em"/><mi>I</mi><mo>=</mo><mi>P</mi><mo>·</mo><mi>i</mi><mtext> fijo</mtext><mo>,</mo><mspace width=".6em"/><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mi>P</mi><mo>,</mo><mspace width=".6em"/><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><mi>I</mi><mo>+</mo><mi>P</mi></mrow>
+      </mrow></math>
+      <dl class="vars">
+        <dt>Iₜ</dt><dd>interés del período (sobre el saldo previo Sₜ₋₁)</dd>
+        <dt>Aₜ</dt><dd>amortización de capital del período t</dd>
+        <dt>Cₜ</dt><dd>cuota del período t</dd>
+        <dt>P / n / i</dt><dd>capital / número de cuotas / tasa del período</dd>
       </dl>
     </div>
 

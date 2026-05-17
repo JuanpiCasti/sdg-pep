@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Cálculo de créditos — Preparación y Evaluación de Proyectos · Sapag Chain</title>
+<meta name="description" content="Sistemas de amortización de créditos: francés, alemán y americano. Cómo se calculan la cuota, la amortización y los intereses, con tablas de desarrollo y gráficos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="topbar__marca" href="index.html">
+      <span class="sigla">PEP</span> Preparación y Evaluación de Proyectos
+    </a>
+    <nav class="topbar__nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <details class="nav-caps">
+        <summary>Capítulos</summary>
+        <div class="nav-caps__panel">
+          <a href="capitulos/capitulo-01.html"><span class="ix-n">1</span>El estudio de proyectos</a>
+          <a href="capitulos/capitulo-02.html"><span class="ix-n">2</span>Identificación de oportunidades de negocio</a>
+          <a href="capitulos/capitulo-03.html"><span class="ix-n">3</span>El proceso de preparación y evaluación</a>
+          <a href="capitulos/capitulo-04.html"><span class="ix-n">4</span>El estudio de mercado</a>
+          <a href="capitulos/capitulo-05.html"><span class="ix-n">5</span>Técnicas de proyección del mercado</a>
+          <a href="capitulos/capitulo-06.html"><span class="ix-n">6</span>Estimación de costos</a>
+          <a href="capitulos/capitulo-07.html"><span class="ix-n">7</span>Antecedentes económicos del estudio técnico</a>
+          <a href="capitulos/capitulo-08.html"><span class="ix-n">8</span>La determinación del tamaño</a>
+          <a href="capitulos/capitulo-09.html"><span class="ix-n">9</span>Decisiones de localización</a>
+          <a href="capitulos/capitulo-10.html"><span class="ix-n">10</span>Efectos económicos de aspectos organizacionales</a>
+          <a href="capitulos/capitulo-11.html"><span class="ix-n">11</span>Antecedentes económicos del estudio legal</a>
+          <a href="capitulos/capitulo-12.html"><span class="ix-n">12</span>Las inversiones del proyecto</a>
+          <a href="capitulos/capitulo-13.html"><span class="ix-n">13</span>Beneficios del proyecto</a>
+          <a href="capitulos/capitulo-14.html"><span class="ix-n">14</span>Construcción de flujos de caja</a>
+          <a href="capitulos/capitulo-15.html"><span class="ix-n">15</span>Criterios de evaluación de proyectos</a>
+          <a href="capitulos/capitulo-16.html"><span class="ix-n">16</span>Costo de capital</a>
+          <a href="capitulos/capitulo-17.html"><span class="ix-n">17</span>Análisis de riesgo</a>
+          <a href="capitulos/capitulo-18.html"><span class="ix-n">18</span>Análisis de sensibilidad</a>
+          <a href="capitulos/capitulo-19.html"><span class="ix-n">19</span>Preparación y evaluación social de proyectos</a>
+        </div>
+      </details>
+      <a href="formulario.html">Formulario</a>
+      <a href="formulario-sdg.html">Formulario SDG</a>
+      <a href="creditos.html">Créditos</a>
+      <a href="glosario.html">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main class="pagina">
+  <p class="migas">
+    <a href="index.html">Inicio</a> › <span>Cálculo de créditos</span>
+  </p>
+
+  <article class="contenido" id="contenido">
+
+    <header class="cap-cabecera">
+      <span class="bloque-tag">Recurso de repaso</span>
+      <div class="num">Sistemas de amortización</div>
+      <h1 class="cap-titulo">Cálculo de créditos</h1>
+    </header>
+
+    <p class="lead">Cuando se financia parte de una inversión con un préstamo, conviene
+      conocer cómo se reparte cada pago entre el <strong>interés</strong> que cobra el
+      prestamista y la <strong>amortización</strong> que devuelve el capital. Esta página
+      desarrolla los tres sistemas de amortización clásicos —<strong>francés</strong>,
+      <strong>alemán</strong> y <strong>americano</strong>— mostrando para cada uno cómo se
+      calculan la cuota, la amortización y los intereses, su tabla de desarrollo y un
+      gráfico de la composición de las cuotas.</p>
+
+    <nav class="cap-indice" aria-label="Contenido de la página">
+      <h2>Contenido</h2>
+      <ol>
+        <li><a href="#c0"><span class="ix-num">0</span>Conceptos generales</a></li>
+        <li><a href="#c1"><span class="ix-num">1</span>Sistema francés — cuota fija</a></li>
+        <li><a href="#c2"><span class="ix-num">2</span>Sistema alemán — amortización fija</a></li>
+        <li><a href="#c3"><span class="ix-num">3</span>Sistema americano — capital al final</a></li>
+        <li><a href="#c4"><span class="ix-num">4</span>Comparación de los tres sistemas</a></li>
+      </ol>
+    </nav>
+
+    <!-- ===== CONCEPTOS GENERALES ===== -->
+    <h2 id="c0"><span class="h-num">0</span> Conceptos generales</h2>
+    <p>Un crédito se devuelve en una serie de pagos periódicos llamados <strong>cuotas</strong>.
+      Cada cuota se descompone en dos partes:</p>
+    <div class="conceptos">
+      <div class="concepto">
+        <b>Interés</b>
+        <span>Costo del dinero en el período. Se calcula siempre sobre el saldo de deuda
+          pendiente al inicio del período.</span>
+      </div>
+      <div class="concepto">
+        <b>Amortización</b>
+        <span>Parte de la cuota que efectivamente devuelve el capital prestado y reduce el
+          saldo de la deuda.</span>
+      </div>
+    </div>
+    <p>La <strong>tabla</strong> o <strong>cuadro de desarrollo</strong> del crédito ordena,
+      período a período, el saldo, la cuota y su descomposición. Cualquiera sea el sistema,
+      se cumplen estas tres relaciones:</p>
+    <div class="formula formula--destacada">
+      <span class="etq">Relaciones básicas de toda tabla de desarrollo</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><msub><mi>I</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>·</mo><mi>i</mi></mrow>
+        <mspace width="2em"/>
+        <mrow><msub><mi>C</mi><mi>t</mi></msub><mo>=</mo><msub><mi>I</mi><mi>t</mi></msub><mo>+</mo><msub><mi>A</mi><mi>t</mi></msub></mrow>
+        <mspace width="2em"/>
+        <mrow><msub><mi>S</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>A</mi><mi>t</mi></msub></mrow>
+      </mrow></math>
+      <dl class="vars">
+        <dt>Sₜ</dt><dd>saldo de la deuda al final del período t (S₀ = capital prestado)</dd>
+        <dt>i</dt><dd>tasa de interés del período</dd>
+        <dt>Iₜ</dt><dd>interés del período t</dd>
+        <dt>Cₜ</dt><dd>cuota del período t</dd>
+        <dt>Aₜ</dt><dd>amortización (capital devuelto) del período t</dd>
+      </dl>
+    </div>
+    <p>Lo que distingue a cada sistema es <em>qué componente se mantiene constante</em>: la
+      cuota (francés), la amortización (alemán) o la devolución del capital, que se difiere
+      por completo al final (americano).</p>
+
+    <div class="caja caja--objetivo">
+      <div class="caja__tit">Supuestos del ejemplo</div>
+      <p>Todos los desarrollos de esta página usan el mismo crédito de referencia:</p>
+      <ul>
+        <li><strong>Capital</strong> (P) = $770 000</li>
+        <li><strong>Tasa efectiva anual</strong> (TEA) = 79,6 %</li>
+        <li><strong>Plazo</strong> (n) = 3 períodos anuales</li>
+      </ul>
+      <p>Como la periodicidad coincide con el año, la tasa del período es
+        <strong>i = 0,796</strong>. El interés del primer período es igual en los tres
+        sistemas: 770 000 · 0,796 = <strong>$612 920</strong>.</p>
+    </div>
+
+    <!-- ===== SISTEMA FRANCÉS ===== -->
+    <h2 id="c1"><span class="h-num">1</span> Sistema francés — cuota fija</h2>
+    <p>En el sistema francés <strong>todas las cuotas son iguales</strong>. Se calcula primero
+      la cuota constante con la fórmula de la anualidad; luego, en cada período, el interés
+      surge del saldo y la amortización es el resto de la cuota. Como el saldo baja, el
+      interés disminuye y la amortización crece período a período.</p>
+    <div class="formula">
+      <span class="etq">Cuota fija · interés · amortización (sistema francés)</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow><mi>C</mi><mo>=</mo><mi>P</mi><mo>·</mo><mfrac><mrow><mi>i</mi><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup></mrow><mrow><msup><mrow><mo>(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mo>)</mo></mrow><mi>n</mi></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow>
+      </math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><msub><mi>I</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>·</mo><mi>i</mi></mrow>
+        <mspace width="2.5em"/>
+        <mrow><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><mi>C</mi><mo>−</mo><msub><mi>I</mi><mi>t</mi></msub></mrow>
+      </mrow></math>
+      <dl class="vars">
+        <dt>C</dt><dd>cuota fija (igual en todos los períodos)</dd>
+        <dt>P</dt><dd>capital prestado</dd>
+        <dt>i</dt><dd>tasa de interés del período</dd>
+        <dt>n</dt><dd>número de cuotas</dd>
+      </dl>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Desarrollo del sistema francés</div>
+      <div class="ejemplo__cuerpo">
+        <p>Con P = 770 000, i = 0,796 y n = 3, la cuota fija es:</p>
+        <p class="resultado">C = $740 792,65</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro de desarrollo — sistema francés</caption>
+            <thead>
+              <tr><th>Período</th><th class="num">Saldo inicial</th><th class="num">Cuota</th><th class="num">Interés</th><th class="num">Amortización</th><th class="num">Saldo final</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td class="num">770 000,00</td><td class="num">740 792,65</td><td class="num">612 920,00</td><td class="num">127 872,65</td><td class="num">642 127,35</td></tr>
+              <tr><td>2</td><td class="num">642 127,35</td><td class="num">740 792,65</td><td class="num">511 133,37</td><td class="num">229 659,28</td><td class="num">412 468,07</td></tr>
+              <tr><td>3</td><td class="num">412 468,07</td><td class="num">740 792,65</td><td class="num">328 324,58</td><td class="num">412 468,07</td><td class="num">0,00</td></tr>
+            </tbody>
+            <tfoot>
+              <tr class="total"><th>TOTAL</th><td class="num">—</td><td class="num">2 222 377,95</td><td class="num">1 452 377,95</td><td class="num">770 000,00</td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <figure class="grafico-barras">
+          <div class="gb-canvas">
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:44.32%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:9.25%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:36.96%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:16.61%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:23.74%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:29.83%"></div>
+            </div>
+          </div>
+          <div class="gb-ejex"><span>Período 1</span><span>Período 2</span><span>Período 3</span></div>
+          <div class="gb-leyenda">
+            <span class="gb-key gb-key--interes">Interés</span>
+            <span class="gb-key gb-key--amort">Amortización</span>
+          </div>
+          <figcaption>Composición de la cuota — <b>sistema francés</b>. La altura total es
+            constante: la cuota no cambia, pero el interés cede lugar a la amortización.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Cómo leer el gráfico</div>
+      <p>Las tres barras tienen <strong>la misma altura</strong> porque la cuota es fija. Lo
+        que cambia es su composición: el tramo azul (interés) se achica y el verde
+        (amortización) crece a medida que se reduce la deuda.</p>
+    </div>
+
+    <!-- ===== SISTEMA ALEMÁN ===== -->
+    <h2 id="c2"><span class="h-num">2</span> Sistema alemán — amortización fija</h2>
+    <p>En el sistema alemán se devuelve <strong>siempre la misma porción de capital</strong>:
+      el préstamo dividido por el número de períodos. El interés se calcula sobre el saldo y,
+      como este baja de manera uniforme, los intereses y la cuota total descienden período a
+      período.</p>
+    <div class="formula">
+      <span class="etq">Amortización fija · interés · cuota (sistema alemán)</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><mi>A</mi><mo>=</mo><mfrac><mi>P</mi><mi>n</mi></mfrac></mrow>
+        <mspace width="2em"/>
+        <mrow><msub><mi>I</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>·</mo><mi>i</mi></mrow>
+        <mspace width="2em"/>
+        <mrow><msub><mi>C</mi><mi>t</mi></msub><mo>=</mo><mi>A</mi><mo>+</mo><msub><mi>I</mi><mi>t</mi></msub></mrow>
+      </mrow></math>
+      <dl class="vars">
+        <dt>A</dt><dd>amortización fija (igual en todos los períodos)</dd>
+        <dt>P</dt><dd>capital prestado</dd>
+        <dt>n</dt><dd>número de cuotas</dd>
+        <dt>Iₜ</dt><dd>interés del período t</dd>
+        <dt>Cₜ</dt><dd>cuota del período t (decreciente)</dd>
+      </dl>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Desarrollo del sistema alemán</div>
+      <div class="ejemplo__cuerpo">
+        <p>Con P = 770 000 y n = 3, la amortización fija es 770 000 / 3:</p>
+        <p class="resultado">A = $256 666,67 por período</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro de desarrollo — sistema alemán</caption>
+            <thead>
+              <tr><th>Período</th><th class="num">Saldo inicial</th><th class="num">Cuota</th><th class="num">Interés</th><th class="num">Amortización</th><th class="num">Saldo final</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td class="num">770 000,00</td><td class="num">869 586,67</td><td class="num">612 920,00</td><td class="num">256 666,67</td><td class="num">513 333,33</td></tr>
+              <tr><td>2</td><td class="num">513 333,33</td><td class="num">665 280,00</td><td class="num">408 613,33</td><td class="num">256 666,67</td><td class="num">256 666,67</td></tr>
+              <tr><td>3</td><td class="num">256 666,67</td><td class="num">460 973,33</td><td class="num">204 306,67</td><td class="num">256 666,67</td><td class="num">0,00</td></tr>
+            </tbody>
+            <tfoot>
+              <tr class="total"><th>TOTAL</th><td class="num">—</td><td class="num">1 995 840,00</td><td class="num">1 225 840,00</td><td class="num">770 000,00</td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <figure class="grafico-barras">
+          <div class="gb-canvas">
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:44.32%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:18.56%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:29.55%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:18.56%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:14.77%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:18.56%"></div>
+            </div>
+          </div>
+          <div class="gb-ejex"><span>Período 1</span><span>Período 2</span><span>Período 3</span></div>
+          <div class="gb-leyenda">
+            <span class="gb-key gb-key--interes">Interés</span>
+            <span class="gb-key gb-key--amort">Amortización</span>
+          </div>
+          <figcaption>Composición de la cuota — <b>sistema alemán</b>. El tramo verde
+            (amortización) es constante; la cuota baja en escalera porque el interés
+            disminuye.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Cómo leer el gráfico</div>
+      <p>El tramo verde (amortización) mide <strong>siempre lo mismo</strong>. Las barras
+        decrecen porque el tramo azul (interés) se achica a medida que cae la deuda. Es el
+        sistema con la primera cuota más alta, pero el de menor interés total.</p>
+    </div>
+
+    <!-- ===== SISTEMA AMERICANO ===== -->
+    <h2 id="c3"><span class="h-num">3</span> Sistema americano — capital al final</h2>
+    <p>En el sistema americano <strong>no se amortiza capital durante el préstamo</strong>:
+      en cada período solo se paga el interés, y el capital completo se devuelve de una sola
+      vez junto con el último pago. Como el saldo no cambia hasta el final, el interés es
+      constante.</p>
+    <div class="formula">
+      <span class="etq">Interés fijo · amortización · cuota (sistema americano)</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><mi>I</mi><mo>=</mo><mi>P</mi><mo>·</mo><mi>i</mi></mrow>
+        <mspace width="2em"/>
+        <mrow><msub><mi>A</mi><mi>t</mi></msub><mo>=</mo><mn>0</mn></mrow>
+        <mspace width="1em"/>
+        <mtext>(t &lt; n)</mtext>
+        <mspace width="2em"/>
+        <mrow><msub><mi>A</mi><mi>n</mi></msub><mo>=</mo><mi>P</mi></mrow>
+      </mrow></math>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <mrow><msub><mi>C</mi><mi>t</mi></msub><mo>=</mo><mi>I</mi></mrow>
+        <mspace width="1em"/>
+        <mtext>(t &lt; n)</mtext>
+        <mspace width="2.5em"/>
+        <mrow><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><mi>I</mi><mo>+</mo><mi>P</mi></mrow>
+      </mrow></math>
+      <dl class="vars">
+        <dt>I</dt><dd>interés fijo de cada período</dd>
+        <dt>P</dt><dd>capital prestado</dd>
+        <dt>i</dt><dd>tasa de interés del período</dd>
+        <dt>n</dt><dd>último período (devolución del capital)</dd>
+        <dt>Cₜ</dt><dd>cuota del período t</dd>
+      </dl>
+    </div>
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Desarrollo del sistema americano</div>
+      <div class="ejemplo__cuerpo">
+        <p>Con P = 770 000 e i = 0,796, el interés de cada período es 770 000 · 0,796:</p>
+        <p class="resultado">I = $612 920 por período · cuota final = $1 382 920</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro de desarrollo — sistema americano</caption>
+            <thead>
+              <tr><th>Período</th><th class="num">Saldo inicial</th><th class="num">Cuota</th><th class="num">Interés</th><th class="num">Amortización</th><th class="num">Saldo final</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td class="num">770 000,00</td><td class="num">612 920,00</td><td class="num">612 920,00</td><td class="num">0,00</td><td class="num">770 000,00</td></tr>
+              <tr><td>2</td><td class="num">770 000,00</td><td class="num">612 920,00</td><td class="num">612 920,00</td><td class="num">0,00</td><td class="num">770 000,00</td></tr>
+              <tr><td>3</td><td class="num">770 000,00</td><td class="num">1 382 920,00</td><td class="num">612 920,00</td><td class="num">770 000,00</td><td class="num">0,00</td></tr>
+            </tbody>
+            <tfoot>
+              <tr class="total"><th>TOTAL</th><td class="num">—</td><td class="num">2 608 760,00</td><td class="num">1 838 760,00</td><td class="num">770 000,00</td><td class="num">—</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <figure class="grafico-barras">
+          <div class="gb-canvas">
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:44.32%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:0%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:44.32%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:0%"></div>
+            </div>
+            <div class="gb-col">
+              <div class="gb-seg gb-seg--interes" style="height:44.32%"></div>
+              <div class="gb-seg gb-seg--amort" style="height:55.68%"></div>
+            </div>
+          </div>
+          <div class="gb-ejex"><span>Período 1</span><span>Período 2</span><span>Período 3</span></div>
+          <div class="gb-leyenda">
+            <span class="gb-key gb-key--interes">Interés</span>
+            <span class="gb-key gb-key--amort">Amortización</span>
+          </div>
+          <figcaption>Composición de la cuota — <b>sistema americano</b>. Las dos primeras
+            cuotas son solo interés; en la última se suma toda la devolución del capital.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Cómo leer el gráfico</div>
+      <p>Las dos primeras barras son iguales y solo tienen tramo azul: son interés puro. La
+        tercera salta porque incorpora la amortización de los $770 000 completos. Es el
+        sistema de cuotas iniciales más bajas, pero el de mayor interés total.</p>
+    </div>
+
+    <!-- ===== COMPARACIÓN ===== -->
+    <h2 id="c4"><span class="h-num">4</span> Comparación de los tres sistemas</h2>
+    <p>Los tres sistemas devuelven el mismo capital ($770 000), pero difieren en el momento
+      en que lo hacen y, por lo tanto, en el interés total pagado: cuanto antes se amortiza,
+      menos interés se acumula.</p>
+    <div class="tabla-wrap">
+      <table>
+        <caption>Totales pagados según el sistema de amortización</caption>
+        <thead>
+          <tr><th>Sistema</th><th class="num">Total cuotas</th><th class="num">Total interés</th><th class="num">Capital devuelto</th><th>Perfil de la cuota</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Francés</td><td class="num">2 222 377,95</td><td class="num">1 452 377,95</td><td class="num">770 000,00</td><td>constante</td></tr>
+          <tr><td>Alemán</td><td class="num">1 995 840,00</td><td class="num">1 225 840,00</td><td class="num">770 000,00</td><td>decreciente</td></tr>
+          <tr><td>Americano</td><td class="num">2 608 760,00</td><td class="num">1 838 760,00</td><td class="num">770 000,00</td><td>baja y salto final</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="caja caja--idea">
+      <div class="caja__tit">Idea central</div>
+      <p>El <strong>sistema alemán</strong> es el más barato en interés total, porque amortiza
+        capital desde la primera cuota; exige, eso sí, el mayor desembolso inicial. El
+        <strong>americano</strong> es el más caro: al diferir todo el capital al final, paga
+        interés sobre el total durante toda la vida del crédito. El <strong>francés</strong>
+        queda en el medio y ofrece la ventaja práctica de una cuota constante, cómoda de
+        prever en el flujo de caja.</p>
+    </div>
+
+    <nav class="cap-nav" aria-label="Navegación">
+      <a class="prev" href="glosario.html">
+        <span class="dir">◀ Recurso anterior</span>
+        <span class="ttl">Glosario</span>
+      </a>
+      <a class="next" href="index.html">
+        <span class="dir">Volver al inicio ▶</span>
+        <span class="ttl">Índice del sitio</span>
+      </a>
+    </nav>
+
+  </article>
+</main>
+
+<footer class="pie">
+  <div class="pie__in">
+    <p>Sitio de estudio basado en <strong>Preparación y Evaluación de Proyectos</strong>,
+      6.ª edición — Sapag Chain (McGraw-Hill, 2014). Material de uso educativo para la
+      asignatura <em>Sistemas de Gestión</em>.</p>
+  </div>
+</footer>
+
+</body>
+</html>

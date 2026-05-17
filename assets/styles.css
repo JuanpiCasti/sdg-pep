@@ -431,7 +431,7 @@ thead th {
   border-bottom: 0;
 }
 tbody tr:nth-child(even) { background: var(--fondo-grid); }
-td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 tr.total td, tr.total th {
   background: var(--azul-claro);
   font-weight: 700;
@@ -484,6 +484,63 @@ figcaption {
   text-align: center; margin-top: .8rem;
 }
 figcaption b { color: var(--azul); }
+
+/* ====================  GRÁFICO DE BARRAS APILADAS  ====================== */
+.grafico-barras { padding: 1.5rem 1.5rem 1.2rem; }
+.gb-canvas {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.4rem;
+  height: 230px;
+  padding: 0 .4rem;
+  border-bottom: 2px solid var(--tinta-sec);
+}
+.gb-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.gb-seg {
+  width: 100%;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.gb-seg--interes { background: var(--azul); }
+.gb-seg--amort   { background: var(--verde); }
+.gb-seg:first-child { border-radius: var(--radio) var(--radio) 0 0; }
+.gb-ejex {
+  display: flex;
+  gap: 1.4rem;
+  padding: .4rem .4rem 0;
+}
+.gb-ejex span {
+  flex: 1;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: .78rem;
+  color: var(--tinta-sec);
+}
+.gb-leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: .9rem;
+  font-family: var(--sans);
+  font-size: .8rem;
+  color: var(--tinta-sec);
+}
+.gb-key { display: inline-flex; align-items: center; gap: .4rem; }
+.gb-key::before {
+  content: "";
+  width: .85rem; height: .85rem;
+  border-radius: 2px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.gb-key--interes::before { background: var(--azul); }
+.gb-key--amort::before   { background: var(--verde); }
 
 /* ====================  ÍNDICE DEL CAPÍTULO  ============================= */
 .cap-indice {
