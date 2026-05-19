@@ -81,7 +81,7 @@
         <li><a href="#f13"><span class="ix-num">13</span>Valores de desecho</a></li>
         <li><a href="#f14"><span class="ix-num">14</span>Flujos de caja</a></li>
         <li><a href="#fte"><span class="ix-num">TE</span>Tasas equivalentes</a></li>
-        <li><a href="#fflujo"><span class="ix-num">FF</span>Flujo de fondos del inversionista</a></li>
+        <li><a href="#fflujo"><span class="ix-num">FF</span>Flujo de fondos del inversionista y de la deuda</a></li>
         <li><a href="#f15"><span class="ix-num">15</span>Criterios de evaluación</a></li>
         <li><a href="#f16"><span class="ix-num">16</span>Costo de capital</a></li>
       </ol>
@@ -234,7 +234,7 @@
 
     <section class="f-grupo">
     <!-- ===== FLUJO DE FONDOS ===== -->
-    <h2 id="fflujo"><span class="h-num">FF</span> Flujo de fondos del inversionista — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
+    <h2 id="fflujo"><span class="h-num">FF</span> Flujo de fondos del inversionista y de la deuda — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
     <div class="tabla-wrap">
       <table class="flujo-fondos">
         <caption>Estructura del flujo de caja del inversionista</caption>
@@ -256,6 +256,31 @@
           <tr class="total"><td>= Flujo de caja del inversionista</td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="tabla-wrap">
+      <table class="flujo-fondos">
+        <caption>Estructura del flujo de caja de la deuda</caption>
+        <tbody>
+          <tr><td>+ Crédito (año 0)</td></tr>
+          <tr><td>− Gastos financieros (intereses)</td></tr>
+          <tr class="sub"><td>= Resultado antes de impuesto</td></tr>
+          <tr><td>+ Ahorro tributario (intereses × tasa de impuesto)</td></tr>
+          <tr class="sub"><td>= Costo efectivo de la deuda</td></tr>
+          <tr><td>− Amortización de capital</td></tr>
+          <tr class="total"><td>= Flujo neto de la deuda</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="formula">
+      <span class="etq">VAN ajustado</span>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>
+        <msub><mi>VAN</mi><mtext>ajustado</mtext></msub><mo>=</mo>
+        <msub><mi>VAN</mi><mtext>proyecto puro</mtext></msub><mo>+</mo><msub><mi>VAN</mi><mtext>deuda</mtext></msub>
+      </mrow></math>
+      <dl class="vars">
+        <dt>VAN deuda</dt><dd>flujo neto de la deuda descontado a la tasa de la deuda; equivale al valor presente del ahorro tributario</dd>
+        <dt>VAN proyecto puro</dt><dd>VAN del flujo económico, descontado a la tasa exigida al proyecto</dd>
+      </dl>
     </div>
 
     </section>

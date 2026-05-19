@@ -325,6 +325,60 @@
       </div>
     </div>
 
+    <h3>El flujo de caja de la deuda</h3>
+    <p>El efecto del financiamiento puede aislarse construyendo un <strong>flujo de caja de la
+      deuda</strong> de manera <strong>totalmente independiente</strong> del flujo del proyecto
+      puro (flujo económico). Este flujo se <strong>descuenta a la tasa de la deuda</strong> —no
+      a la tasa exigida al proyecto—, y su valor actual se denomina <strong>VAN de la
+      deuda</strong>.</p>
+
+    <div class="ejemplo">
+      <div class="ejemplo__cab">Ejemplo · Flujo de caja de la deuda (crédito de $16 000)</div>
+      <div class="ejemplo__cuerpo">
+        <p>Un proyecto financia el 40 % de su inversión con un <strong>crédito de $16 000</strong>
+          (en miles) a <strong>5 años</strong>, tasa de la deuda <strong>5,5 %</strong>, en cuotas
+          anuales iguales de $3 747 (sistema francés). La tabla de desarrollo del crédito separa
+          cada cuota entre gasto financiero y amortización de capital, y agrega el ahorro
+          tributario que generan los intereses (impuesto 20 %):</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 14.11 · Tabla de desarrollo del crédito (miles de $)</caption>
+            <thead><tr><th>Período</th><th class="num">Gasto financiero</th><th class="num">Amortización de capital</th><th class="num">Valor cuota</th><th class="num">Saldo insoluto</th><th class="num">Ahorro tributario</th><th class="num">Costo efectivo de la deuda</th></tr></thead>
+            <tbody>
+              <tr><td>Año 1</td><td class="num">(880)</td><td class="num">(2 867)</td><td class="num">(3 747)</td><td class="num">13 133</td><td class="num">176</td><td class="num">(704)</td></tr>
+              <tr><td>Año 2</td><td class="num">(722)</td><td class="num">(3 024)</td><td class="num">(3 747)</td><td class="num">10 109</td><td class="num">144</td><td class="num">(578)</td></tr>
+              <tr><td>Año 3</td><td class="num">(556)</td><td class="num">(3 191)</td><td class="num">(3 747)</td><td class="num">6 918</td><td class="num">111</td><td class="num">(445)</td></tr>
+              <tr><td>Año 4</td><td class="num">(380)</td><td class="num">(3 366)</td><td class="num">(3 747)</td><td class="num">3 551</td><td class="num">76</td><td class="num">(304)</td></tr>
+              <tr><td>Año 5</td><td class="num">(195)</td><td class="num">(3 551)</td><td class="num">(3 747)</td><td class="num">0</td><td class="num">39</td><td class="num">(156)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Con esos datos se arma el flujo de caja de la deuda. Note que solo los gastos
+          financieros pasan por el resultado antes de impuesto: la amortización de capital se
+          resta después, y el crédito ingresa en el año 0:</p>
+        <div class="tabla-wrap">
+          <table>
+            <caption>Cuadro 14.12 · Flujo de caja de la deuda (miles de $)</caption>
+            <thead><tr><th>Concepto</th><th class="num">0</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th></tr></thead>
+            <tbody>
+              <tr><td>Gastos financieros</td><td class="num">—</td><td class="num">(880)</td><td class="num">(722)</td><td class="num">(556)</td><td class="num">(380)</td><td class="num">(195)</td></tr>
+              <tr><td>Resultado antes de impuesto</td><td class="num">—</td><td class="num">(880)</td><td class="num">(722)</td><td class="num">(556)</td><td class="num">(380)</td><td class="num">(195)</td></tr>
+              <tr><td>(+) Ahorro tributario (20 %)</td><td class="num">—</td><td class="num">176</td><td class="num">144</td><td class="num">111</td><td class="num">76</td><td class="num">39</td></tr>
+              <tr><td>Costo efectivo de la deuda</td><td class="num">—</td><td class="num">(704)</td><td class="num">(578)</td><td class="num">(445)</td><td class="num">(304)</td><td class="num">(156)</td></tr>
+              <tr><td>(−) Amortizaciones de capital</td><td class="num">—</td><td class="num">(2 867)</td><td class="num">(3 024)</td><td class="num">(3 191)</td><td class="num">(3 366)</td><td class="num">(3 551)</td></tr>
+              <tr><td>(+) Crédito</td><td class="num">16 000</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr class="total"><td>Flujo neto de la deuda</td><td class="num">16 000</td><td class="num">(3 571)</td><td class="num">(3 602)</td><td class="num">(3 636)</td><td class="num">(3 671)</td><td class="num">(3 708)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="resultado">Descontado a la tasa de la deuda (5,5 %), el flujo neto da un
+          <strong>VAN de la deuda = 483</strong>. Como los gastos financieros y las amortizaciones
+          se proyectaron con la misma tasa con que se descuenta el flujo, ese efecto se neutraliza
+          y el VAN de la deuda termina siendo exactamente el <strong>valor presente del ahorro
+          tributario</strong> de los intereses.</p>
+      </div>
+    </div>
+
     <h3>El VAN ajustado</h3>
     <p>Una forma alternativa de obtener el flujo del inversionista es calcular por separado el
       <strong>VAN del proyecto puro</strong> y el <strong>VAN de la deuda</strong>, y sumarlos:</p>
