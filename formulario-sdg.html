@@ -81,7 +81,7 @@
         <li><a href="#f13"><span class="ix-num">13</span>Valores de desecho</a></li>
         <li><a href="#f14"><span class="ix-num">14</span>Flujos de caja</a></li>
         <li><a href="#fte"><span class="ix-num">TE</span>Tasas equivalentes</a></li>
-        <li><a href="#fflujo"><span class="ix-num">FF</span>Flujo de fondos del inversionista y de la deuda</a></li>
+        <li><a href="#fflujo"><span class="ix-num">FF</span>Flujo de fondos del inversionista</a></li>
         <li><a href="#f15"><span class="ix-num">15</span>Criterios de evaluación</a></li>
         <li><a href="#f16"><span class="ix-num">16</span>Costo de capital</a></li>
       </ol>
@@ -103,16 +103,7 @@
       </dl>
     </div>
     <div class="formula">
-      <span class="etq">Elasticidad-precio de la demanda</span>
-      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-        <mrow><msub><mi>E</mi><mi>p</mi></msub><mo>=</mo><mfrac><mrow><mi>Δ</mi><mi>Q</mi><mo>/</mo><mi>Q</mi></mrow><mrow><mi>Δ</mi><mi>P</mi><mo>/</mo><mi>P</mi></mrow></mfrac></mrow>
-      </math>
-      <dl class="vars">
-        <dt>E<sub>p</sub></dt><dd>elasticidad-precio de la demanda</dd>
-        <dt>ΔQ/Q</dt><dd>variación porcentual de la cantidad demandada</dd>
-        <dt>ΔP/P</dt><dd>variación porcentual del precio</dd>
-      </dl>
-      <p>Relación inversa en bienes «normales» (E<sub>p</sub> &lt; 0).</p>
+      <span class="etq">Elasticidad-precio de la demanda: E<sub>p</sub> = (ΔQ/Q) / (ΔP/P) — bienes normales E<sub>p</sub> &lt; 0</span>
     </div>
 
     </section>
@@ -246,40 +237,26 @@
 
     <section class="f-grupo">
     <!-- ===== FLUJO DE FONDOS ===== -->
-    <h2 id="fflujo"><span class="h-num">FF</span> Flujo de fondos del inversionista y de la deuda — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
+    <h2 id="fflujo"><span class="h-num">FF</span> Flujo de fondos del inversionista — <a href="capitulos/capitulo-14.html">cap. 14</a></h2>
     <div class="tabla-wrap">
       <table class="flujo-fondos">
         <caption>Estructura del flujo de caja del inversionista</caption>
         <tbody>
           <tr><td>+ Ingresos afectos a impuestos</td></tr>
           <tr><td>− Egresos afectos a impuestos</td></tr>
-          <tr class="sub"><td>= EBITDA (resultado antes de intereses, impuestos, depreciación y amortización)</td></tr>
+          <tr class="sub"><td>= EBITDA</td></tr>
           <tr><td>− Gastos no desembolsables (depreciación, amortización, valor libro)</td></tr>
-          <tr class="sub"><td>= EBIT · resultado operativo (antes de intereses e impuestos)</td></tr>
+          <tr class="sub"><td>= EBIT (resultado operativo)</td></tr>
           <tr><td>− Intereses del préstamo</td></tr>
           <tr class="sub"><td>= Resultado antes de impuesto</td></tr>
           <tr><td>− Impuesto</td></tr>
           <tr class="sub"><td>= Resultado después de impuesto</td></tr>
           <tr><td>+ Ajustes por gastos no desembolsables</td></tr>
           <tr><td>− Egresos no afectos a impuestos (inversiones)</td></tr>
-          <tr><td>+ Beneficios no afectos a impuestos (valor de desecho, recuperación de capital de trabajo)</td></tr>
+          <tr><td>+ Beneficios no afectos a impuestos (valor de desecho, recup. K. trabajo)</td></tr>
           <tr><td>+ Préstamo</td></tr>
           <tr><td>− Amortización de la deuda</td></tr>
           <tr class="total"><td>= Flujo de caja del inversionista</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tabla-wrap">
-      <table class="flujo-fondos">
-        <caption>Estructura del flujo de caja de la deuda</caption>
-        <tbody>
-          <tr><td>+ Crédito (año 0)</td></tr>
-          <tr><td>− Gastos financieros (intereses)</td></tr>
-          <tr class="sub"><td>= Resultado antes de impuesto</td></tr>
-          <tr><td>+ Ahorro tributario (intereses × tasa de impuesto)</td></tr>
-          <tr class="sub"><td>= Costo efectivo de la deuda</td></tr>
-          <tr><td>− Amortización de capital</td></tr>
-          <tr class="total"><td>= Flujo neto de la deuda</td></tr>
         </tbody>
       </table>
     </div>
@@ -290,8 +267,8 @@
         <msub><mi>VAN</mi><mtext>proyecto puro</mtext></msub><mo>+</mo><msub><mi>VAN</mi><mtext>deuda</mtext></msub>
       </mrow></math>
       <dl class="vars">
-        <dt>VAN deuda</dt><dd>flujo neto de la deuda descontado a la tasa de la deuda; equivale al valor presente del ahorro tributario</dd>
-        <dt>VAN proyecto puro</dt><dd>VAN del flujo económico, descontado a la tasa exigida al proyecto</dd>
+        <dt>VAN proyecto puro</dt><dd>VAN del flujo económico</dd>
+        <dt>VAN deuda</dt><dd>VP del ahorro tributario</dd>
       </dl>
     </div>
 

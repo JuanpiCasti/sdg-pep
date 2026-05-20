@@ -980,7 +980,7 @@ figcaption b { color: var(--azul); }
 }
 
 /* ===== Modo impresión del formulario: machete en 1 hoja A4 ===== */
-@page { size: A4 portrait; margin: 8mm; }
+@page { size: A4 portrait; margin: 6mm 8mm; }
 
 @media print {
   body.doc-formulario,
@@ -1003,7 +1003,7 @@ figcaption b { color: var(--azul); }
   body.doc-formulario .f-grupo {
     break-inside: avoid;
     display: inline-block; width: 100%;
-    margin: 0 0 3.4mm;
+    margin: 0 0 2.4mm;
   }
 
   /* Encabezado de capítulo */
